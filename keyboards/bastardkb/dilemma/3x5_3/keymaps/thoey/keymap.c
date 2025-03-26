@@ -112,7 +112,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * base layer to avoid having to layer change mid edit and to enable auto-repeat.
  */
   [LAYER_NAVIGATION] = LAYOUT_split_3x5_3(
-    A(KC_LSFT), XXXXXXX,    KC_4,    KC_5,       KC_6,               KC_7, KC_8, KC_9, KC_0, KC_MINS,
+    A(KC_LSFT), CW_TOGG,    KC_4,    KC_5,       KC_6,               KC_7, KC_8, KC_9, KC_0, KC_MINS,
     KC_RBRC,    KC_LEFT,    KC_UP,   KC_RGHT,    KC_HOME,            KC_CAPS, KC_LEFT, KC_DOWN,   KC_UP, KC_QUOT,
     KC_ESC,     A(KC_LEFT), KC_DOWN, A(KC_RGHT), KC_END,             KC_INS, KC_HOME, KC_PGDN, KC_PGUP,  KC_END,
                         XXXXXXX, C(KC_PGUP), C(KC_PGDN),             KC_EQL, KC_LBRC, KC_DEL
