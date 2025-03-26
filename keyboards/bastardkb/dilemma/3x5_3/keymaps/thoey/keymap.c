@@ -28,6 +28,28 @@ enum dilemma_keymap_layers {
     LAYER_SYMBOLS,
 };
 
+//combos
+const uint16_t PROGMEM pageup[] = {KC_W, KC_E, COMBO_END};
+const uint16_t PROGMEM pagedn[] = {KC_X, KC_C, COMBO_END};
+const uint16_t PROGMEM alt[] = {KC_S, KC_D, COMBO_END};
+const uint16_t PROGMEM alt1[] = {KC_W, KC_R, COMBO_END};
+const uint16_t PROGMEM alt2[] = {KC_X, KC_V, COMBO_END};
+const uint16_t PROGMEM layer5[] = {KC_Q, KC_W, COMBO_END};
+const uint16_t PROGMEM f2[] = {KC_R, KC_T, COMBO_END};
+const uint16_t PROGMEM rctl[] = {KC_K, KC_L, COMBO_END};
+
+
+combo_t key_combos[] = {
+    COMBO(pageup, KC_PGUP),
+    COMBO(pagedn, KC_PGDN), 
+    COMBO(alt, OSM(MOD_LALT)),
+    COMBO(alt1, A(KC_1)),
+    COMBO(alt2, A(KC_2)),
+    COMBO(layer5, OSL(5)),
+    COMBO(f2, KC_F2),
+    COMBO(rctl, KC_RCTL),
+};
+
 // Automatically enable sniping-mode on the pointer layer.
 // #define DILEMMA_AUTO_SNIPING_ON_LAYER LAYER_POINTER
 
@@ -50,10 +72,10 @@ enum dilemma_keymap_layers {
 /** \brief QWERTY layout (3 rows, 10 columns). */
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_BASE] = LAYOUT_split_3x5_3(
-       KC_Q,    KC_W,    KC_E,    KC_R,         KC_T,                KC_Y,    KC_U,         KC_I,     KC_O,    KC_P,
-       KC_A,    KC_S,    KC_D,    LSFT_T(KC_F), KC_G,                KC_H,    LSFT_T(KC_J), KC_K,     KC_L,    KC_QUOT,
-       PT_Z,    KC_X,    KC_C,    KC_V,         KC_B,                KC_N,    KC_M,         KC_COMM,  KC_DOT,  PT_SLSH,
-                         ESC_MED, KC_TAB,       KC_BSPC,             KC_SPC,  KC_ENT,       KC_MUTE
+       KC_Q,    KC_W,    KC_E,    KC_R,           KC_T,                    KC_Y,    KC_U,         KC_I,     KC_O,    KC_P,
+       KC_A,    KC_S,    KC_D,    LSFT_T(KC_F),   KC_G,                    KC_H,    LSFT_T(KC_J), KC_K,     KC_L,    KC_QUOT,
+       PT_Z,    KC_X,    KC_C,    KC_V,           KC_B,                    KC_N,    KC_M,         KC_COMM,  KC_DOT,  PT_SLSH,
+                         TG(1),   LCTL_T(KC_TAB), LT(2,KC_BSPC),           KC_SPC,  LT(1,KC_ENT), KC_MUTE
   ),
 
 /*
@@ -78,7 +100,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_ESC,   KC_LSFT,  KC_W,   KC_C,    KC_R,             KC_MINS,   KC_7,   KC_8,   KC_9,  KC_F12,
     KC_E,     KC_A,     KC_S,   KC_D,    KC_G,             KC_PPLS,   KC_4,   KC_5,   KC_6,  KC_PAST,
     KC_X,     KC_3,     KC_F2,  KC_F,    KC_5,             KC_0,      KC_1,   KC_2,   KC_3,  KC_PSLS,
-                       XXXXXXX, KC_LALT, KC_SPC,           XXXXXXX, XXXXXXX, XXXXXXX
+                        TG(1),  KC_LALT, KC_SPC,           XXXXXXX, XXXXXXX, XXXXXXX
   ),
 
 /**
@@ -90,10 +112,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * base layer to avoid having to layer change mid edit and to enable auto-repeat.
  */
   [LAYER_NAVIGATION] = LAYOUT_split_3x5_3(
-    XXXXXXX, XXXXXXX, KC_4, KC_5, KC_6,             XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-    KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX,     KC_CAPS, KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT,
+    XXXXXXX, XXXXXXX, KC_4, KC_5, KC_6,               KC_7, KC_8, KC_9, KC_0, KC_MINS,
+    KC_RBRC, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX,      KC_CAPS, KC_LEFT, KC_DOWN,   KC_UP, KC_QUOT,
     XXXXXXX, KC_RALT, XXXXXXX, XXXXXXX, XXXXXXX,      KC_INS, KC_HOME, KC_PGDN, KC_PGUP,  KC_END,
-                      XXXXXXX, XXXXXXX, _______,  KC_ENT, KC_BSPC, KC_DEL
+                      XXXXXXX, XXXXXXX, _______,      KC_EQL, KC_LBRC, KC_DEL
   ),
 
 /**
