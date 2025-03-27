@@ -115,10 +115,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * from the base layer to enable auto-repeat.
  */
   [LAYER_FUNCTION] = LAYOUT_split_3x5_3(
-    KC_ESC,   KC_LSFT,  KC_W,   KC_C,    KC_R,             KC_MINS,   KC_7,   KC_8,   KC_9,  KC_F12,
-    KC_E,     KC_A,     KC_S,   KC_D,    KC_G,             KC_PPLS,   KC_4,   KC_5,   KC_6,  KC_PAST,
-    KC_X,     KC_3,     KC_F2,  KC_F,    KC_5,             KC_0,      KC_1,   KC_2,   KC_3,  KC_PSLS,
-                        TG(1),  KC_LALT, KC_SPC,           XXXXXXX, XXXXXXX, XXXXXXX
+    LT(3,KC_ESC),   KC_LSFT,  KC_W,        KC_C,    KC_R,             KC_MINS,   KC_7,   KC_8,   KC_9,  KC_F12,
+    KC_E,           KC_A,     KC_S,        KC_D,    KC_G,             KC_PPLS,   KC_4,   KC_5,   KC_6,  KC_PAST,
+    KC_X,           KC_3,     LT(3,KC_B),  KC_F,    KC_5,             KC_0,      KC_1,   KC_2,   KC_3,  KC_PSLS,
+                                  TG(1),  KC_LALT, KC_SPC,           XXXXXXX, XXXXXXX, XXXXXXX
   ),
 
 /**
@@ -143,10 +143,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * symmetrical to accomodate the left- and right-hand trackball.
  */
   [LAYER_MEDIA] = LAYOUT_split_3x5_3(
-    QK_BOOT,RGB_RMOD, RGB_TOG, RGB_MOD, XXXXXXX,                 XXXXXXX,RGB_RMOD, RGB_TOG, RGB_MOD, QK_BOOT,
-    KC_MPRV, KC_MS_BTN2, KC_MS_BTN3, KC_MS_BTN1, DRGSCRL,         KC_MPRV, KC_VOLD, KC_MUTE, KC_VOLU, KC_MNXT,
+    QK_BOOT, KC_O,       KC_I,       KC_F2,      KC_Q,                 XXXXXXX,RGB_RMOD, RGB_TOG, RGB_MOD, QK_BOOT,
+    XXXXXXX, KC_MS_BTN2, KC_MS_BTN3, KC_MS_BTN1, DRGSCRL,             KC_MPRV, KC_VOLD, KC_MUTE, KC_VOLU, KC_MNXT,
     C(A(KC_DEL)), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-                      _______, KC_MPLY, KC_MSTP,                 KC_MS_BTN1, KC_MS_BTN2, KC_MUTE
+                            _______, XXXXXXX, KC_LCTL,                 KC_MS_BTN1, KC_MS_BTN2, KC_MUTE
   ),
 
 /** \brief Mouse emulation and pointer functions. */
