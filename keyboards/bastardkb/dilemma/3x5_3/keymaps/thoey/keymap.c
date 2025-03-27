@@ -37,6 +37,8 @@ const uint16_t PROGMEM alt2[] = {KC_X, KC_V, COMBO_END};
 const uint16_t PROGMEM lent[] = {KC_Q, KC_W, COMBO_END};
 const uint16_t PROGMEM f2[] = {KC_R, KC_T, COMBO_END};
 const uint16_t PROGMEM rctl[] = {KC_K, KC_L, COMBO_END};
+const uint16_t PROGMEM lclick[] = {KC_Y, KC_U, COMBO_END};
+const uint16_t PROGMEM rclick[] = {KC_U, KC_I, COMBO_END};
 
 
 combo_t key_combos[] = {
@@ -48,6 +50,8 @@ combo_t key_combos[] = {
     COMBO(lent, KC_ENT),
     COMBO(f2, KC_F2),
     COMBO(rctl, KC_RCTL),
+    COMBO(lclick, KC_MS_BTN1),
+    COMBO(rclick, KC_MS_BTN2),
 };
 
 // Automatically enable sniping-mode on the pointer layer.
@@ -73,7 +77,7 @@ combo_t key_combos[] = {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_BASE] = LAYOUT_split_3x5_3(
        KC_Q,          KC_W,    KC_E,    KC_R,           KC_T,                    KC_Y,    KC_U,         KC_I,     KC_O,    KC_P,
-       LT(3,KC_A),    KC_S,    KC_D,    LSFT_T(KC_F),   KC_G,                    KC_H,    RSFT_T(KC_J), KC_K,     KC_L,    LT(2,KC_SCLN),
+       LT(3,KC_A),    KC_S,    KC_D,    LSFT_T(KC_F),   KC_G,                    KC_H,    RSFT_T(KC_J), KC_K,     KC_L,    LT(3,KC_SCLN),
        LT(2,KC_Z),    KC_X,    KC_C,    KC_V,           KC_B,                    KC_N,    KC_M,         KC_COMM,  KC_DOT,  PT_SLSH,
                        TG(1),   LCTL_T(KC_TAB), LT(2,KC_BSPC),                   KC_SPC,  LT(1,KC_ENT), RGB_TOG
   ),
@@ -128,7 +132,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     XXXXXXX,RGB_RMOD, RGB_TOG, RGB_MOD, XXXXXXX,                 XXXXXXX,RGB_RMOD, RGB_TOG, RGB_MOD, XXXXXXX,
     KC_MPRV, KC_MS_BTN2, KC_MS_BTN3, KC_MS_BTN1, DRGSCRL,         KC_MPRV, KC_VOLD, KC_MUTE, KC_VOLU, KC_MNXT,
     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-                      _______, KC_MPLY, KC_MSTP,                 KC_MSTP, KC_MPLY, KC_MUTE
+                      _______, KC_MPLY, KC_MSTP,                 KC_MS_BTN1, KC_MS_BTN2, KC_MUTE
   ),
 
 /** \brief Mouse emulation and pointer functions. */
