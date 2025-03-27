@@ -142,7 +142,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * Tertiary left- and right-hand layer is media and RGB control.  This layer is
  * symmetrical to accomodate the left- and right-hand trackball.
  */
-  [LAYER_MEDIA] = LAYOUT_split_3x5_3(u
+  [LAYER_MEDIA] = LAYOUT_split_3x5_3(
     QK_BOOT,RGB_RMOD, RGB_TOG, RGB_MOD, XXXXXXX,                 XXXXXXX,RGB_RMOD, RGB_TOG, RGB_MOD, QK_BOOT,
     KC_MPRV, KC_MS_BTN2, KC_MS_BTN3, KC_MS_BTN1, DRGSCRL,         KC_MPRV, KC_VOLD, KC_MUTE, KC_VOLU, KC_MNXT,
     C(A(KC_DEL)), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
