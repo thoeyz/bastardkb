@@ -43,6 +43,9 @@ const uint16_t PROGMEM rpgup[] = {KC_O, KC_I, COMBO_END};
 const uint16_t PROGMEM rpgdn[] = {KC_COMM, KC_DOT, COMBO_END};
 const uint16_t PROGMEM tabcyclefwd[] = {KC_M, KC_COMM, COMBO_END};
 const uint16_t PROGMEM tabcyclebk[] = {KC_N, KC_M, COMBO_END};
+const uint16_t PROGMEM ralt1[] = {KC_U, KC_O, COMBO_END};
+const uint16_t PROGMEM ralt2[] = {KC_DOT, KC_M, COMBO_END};
+
 
 
 combo_t key_combos[] = {
@@ -60,6 +63,8 @@ combo_t key_combos[] = {
     COMBO(rpgdn, KC_PGDN),
     COMBO(tabcyclefwd, C(KC_PGDN)),
     COMBO(tabcyclebk, C(KC_PGUP)),
+    COMBO(ralt1, A(KC_1)),
+    COMBO(ralt2, A(KC_2)),
 
 };
 
@@ -137,10 +142,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * Tertiary left- and right-hand layer is media and RGB control.  This layer is
  * symmetrical to accomodate the left- and right-hand trackball.
  */
-  [LAYER_MEDIA] = LAYOUT_split_3x5_3(
+  [LAYER_MEDIA] = LAYOUT_split_3x5_3(u
     QK_BOOT,RGB_RMOD, RGB_TOG, RGB_MOD, XXXXXXX,                 XXXXXXX,RGB_RMOD, RGB_TOG, RGB_MOD, QK_BOOT,
     KC_MPRV, KC_MS_BTN2, KC_MS_BTN3, KC_MS_BTN1, DRGSCRL,         KC_MPRV, KC_VOLD, KC_MUTE, KC_VOLU, KC_MNXT,
-    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+    C(A(KC_DEL)), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
                       _______, KC_MPLY, KC_MSTP,                 KC_MS_BTN1, KC_MS_BTN2, KC_MUTE
   ),
 
