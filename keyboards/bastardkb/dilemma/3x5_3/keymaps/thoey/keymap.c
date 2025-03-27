@@ -39,6 +39,10 @@ const uint16_t PROGMEM f2[] = {KC_R, KC_T, COMBO_END};
 const uint16_t PROGMEM rctl[] = {KC_K, KC_L, COMBO_END};
 const uint16_t PROGMEM lclick[] = {KC_Y, KC_U, COMBO_END};
 const uint16_t PROGMEM rclick[] = {KC_U, KC_I, COMBO_END};
+const uint16_t PROGMEM rpgup[] = {KC_O, KC_I, COMBO_END};
+const uint16_t PROGMEM rpgdn[] = {KC_COMM, KC_DOT, COMBO_END};
+const uint16_t PROGMEM tabcyclefwd[] = {KC_M, KC_COMM, COMBO_END};
+const uint16_t PROGMEM tabcyclebk[] = {KC_N, KC_M, COMBO_END};
 
 
 combo_t key_combos[] = {
@@ -52,6 +56,11 @@ combo_t key_combos[] = {
     COMBO(rctl, KC_RCTL),
     COMBO(lclick, KC_MS_BTN1),
     COMBO(rclick, KC_MS_BTN2),
+    COMBO(rpgup, KC_PGUP),
+    COMBO(rpgdn, KC_PGDN),
+    COMBO(tabcyclefwd, C(KC_PGDN)),
+    COMBO(tabcyclebk, C(KC_PGUP)),
+
 };
 
 // Automatically enable sniping-mode on the pointer layer.
@@ -129,7 +138,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * symmetrical to accomodate the left- and right-hand trackball.
  */
   [LAYER_MEDIA] = LAYOUT_split_3x5_3(
-    XXXXXXX,RGB_RMOD, RGB_TOG, RGB_MOD, XXXXXXX,                 XXXXXXX,RGB_RMOD, RGB_TOG, RGB_MOD, XXXXXXX,
+    QK_BOOT,RGB_RMOD, RGB_TOG, RGB_MOD, XXXXXXX,                 XXXXXXX,RGB_RMOD, RGB_TOG, RGB_MOD, QK_BOOT,
     KC_MPRV, KC_MS_BTN2, KC_MS_BTN3, KC_MS_BTN1, DRGSCRL,         KC_MPRV, KC_VOLD, KC_MUTE, KC_VOLU, KC_MNXT,
     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                 XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
                       _______, KC_MPLY, KC_MSTP,                 KC_MS_BTN1, KC_MS_BTN2, KC_MUTE
