@@ -73,7 +73,7 @@ combo_t key_combos[] = {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_BASE] = LAYOUT_split_3x5_3(
        KC_Q,          KC_W,    KC_E,    KC_R,           KC_T,                    KC_Y,    KC_U,         KC_I,     KC_O,    KC_P,
-       LT(3,KC_A),    KC_S,    KC_D,    LSFT_T(KC_F),   KC_G,                    KC_H,    LSFT_T(KC_J), KC_K,     KC_L,    KC_SCLN,
+       LT(3,KC_A),    KC_S,    KC_D,    LSFT_T(KC_F),   KC_G,                    KC_H,    LSFT_T(KC_J), KC_K,     KC_L,    LT(2,KC_SCLN),
        LT(2,KC_Z),    KC_X,    KC_C,    KC_V,           KC_B,                    KC_N,    KC_M,         KC_COMM,  KC_DOT,  PT_SLSH,
                        TG(1),   LCTL_T(KC_TAB), LT(2,KC_BSPC),                   KC_SPC,  LT(1,KC_ENT), RGB_TOG
   ),
@@ -112,10 +112,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * base layer to avoid having to layer change mid edit and to enable auto-repeat.
  */
   [LAYER_NAVIGATION] = LAYOUT_split_3x5_3(
-    A(KC_LSFT), CW_TOGG,    KC_4,    KC_5,       KC_6,               KC_7, KC_8, KC_9, KC_0, KC_MINS,
-    KC_RBRC,    KC_LEFT,    KC_UP,   KC_RGHT,    KC_HOME,            DRAGSCROLL_TOGGLE, KC_LEFT, KC_DOWN,   KC_UP, KC_QUOT,
-    KC_ESC,     A(KC_LEFT), KC_DOWN, A(KC_RGHT), KC_END,             KC_INS, KC_HOME, KC_PGDN, KC_PGUP,  KC_END,
-                        XXXXXXX, C(KC_PGUP), C(KC_PGDN),             KC_EQL, KC_LBRC, KC_DEL
+    A(KC_LSFT), CW_TOGG,    KC_4,    KC_5,       KC_6,               KC_7,    KC_8,       KC_9,    KC_0,       KC_MINS,
+    KC_RBRC,    KC_LEFT,    KC_UP,   KC_RGHT,    KC_HOME,            XXXXXXX, KC_MS_BTN1, KC_DOWN, KC_MS_BTN2, KC_QUOT,
+    KC_ESC,     A(KC_LEFT), KC_DOWN, A(KC_RGHT), KC_END,             KC_INS,  KC_HOME,    KC_PGDN, KC_PGUP,    KC_END,
+                        XXXXXXX, C(KC_PGUP), C(KC_PGDN),             KC_EQL,  KC_LBRC,    KC_DEL
   ),
 
 /**
