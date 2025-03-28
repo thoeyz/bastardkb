@@ -38,12 +38,11 @@ const uint16_t PROGMEM alt1[] = {KC_W, KC_R, COMBO_END};
 const uint16_t PROGMEM alt2[] = {KC_X, KC_V, COMBO_END};
 const uint16_t PROGMEM lent[] = {KC_Q, KC_W, COMBO_END};
 const uint16_t PROGMEM f2[] = {KC_R, KC_T, COMBO_END};
-const uint16_t PROGMEM rctl[] = {KC_K, KC_L, COMBO_END};
-const uint16_t PROGMEM rpgup[] = {KC_O, KC_I, COMBO_END};
+const uint16_t PROGMEM rpgup[] = {KC_L, KC_K, COMBO_END};
 const uint16_t PROGMEM rpgdn[] = {KC_COMM, KC_DOT, COMBO_END};
 const uint16_t PROGMEM tabcyclefwd[] = {KC_M, KC_COMM, COMBO_END};
 const uint16_t PROGMEM tabcyclebk[] = {KC_N, KC_M, COMBO_END};
-const uint16_t PROGMEM ralt1[] = {KC_U, KC_O, COMBO_END};
+const uint16_t PROGMEM ralt1[] = {KC_H, KC_K, COMBO_END};
 const uint16_t PROGMEM ralt2[] = {KC_DOT, KC_M, COMBO_END};
 
 
@@ -56,7 +55,6 @@ combo_t key_combos[] = {
     COMBO(alt2, A(KC_2)),
     COMBO(lent, KC_ENT),
     COMBO(f2, KC_F2),
-    COMBO(rctl, KC_RCTL),
     COMBO(rpgup, KC_PGUP),
     COMBO(rpgdn, KC_PGDN),
     COMBO(tabcyclefwd, C(KC_PGDN)),
