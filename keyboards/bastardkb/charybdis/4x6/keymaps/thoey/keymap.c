@@ -73,7 +73,7 @@ combo_t key_combos[] = {
 /** \brief Automatically enable sniping-mode on the pointer layer. */
 
 
-#define CHARYBDIS_AUTO_SNIPING_ON_LAYER LAYER_POINTER
+//#define CHARYBDIS_AUTO_SNIPING_ON_LAYER LAYER_POINTER
 
 #ifdef CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_ENABLE
 static uint16_t auto_pointer_layer_timer = 0;
