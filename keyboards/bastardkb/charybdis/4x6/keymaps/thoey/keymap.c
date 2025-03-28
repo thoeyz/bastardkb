@@ -99,17 +99,17 @@ static uint16_t auto_pointer_layer_timer = 0;
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_BASE] = LAYOUT(
 
-        KC_MS_BTN1, KC_MS_BTN2, KC_F2, KC_ENT, S(KC_9),      S(KC_0),               KC_EQL,    KC_7,    KC_ENT,    KC_9,    TG(1), TG(2),
+        KC_MS_BTN1, KC_MS_BTN2, KC_F2, KC_ENT, S(KC_9),      S(KC_0),               KC_EQL,    KC_7,    KC_ENT,    RBG_TOG,    TG(1), TG(2),
         KC_TAB,     KC_LALT,    KC_W,  KC_E,   KC_R,         KC_T,                  KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, KC_BSLS,
         KC_Q,       KC_A,       KC_S,  KC_D,   LSFT_T(KC_F), KC_G,                  KC_H,    RSFT_T(KC_J),    KC_K,    KC_L, KC_SCLN, KC_P,
         DRGSCRL,    KC_Z,       KC_X,  KC_C,   KC_V,         KC_B,                  KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, DRGSCRL,
   
-                                          KC_ESC, KC_BSPC, LT(2,KC_TAB),             RAISE,  KC_SPC,
-                                           C(KC_PGUP), C(KC_PGDN),                   KC_DEL
+                       LT(1,KC_ESC), LCTL_T(KC_BSPC), LT(2,KC_TAB),                 RAISE, LT(1,KC_SPC),
+                                           C(KC_PGUP), C(KC_PGDN),                  A(KC_LSFT)
   ),
 
   [LAYER_LOWER] = LAYOUT(
-       KC_TAB, KC_O,   KC_F2, KC_I,  KC_LEFT, KC_RGHT,          KC_CIRC,   KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_BSPC,
+       KC_TAB, KC_O,   KC_F2, KC_I,  KC_LEFT, KC_RGHT,          KC_CIRC,   KC_AMPR, KC_ASTR, KC_LPRN, KC_TRNS, KC_TRNS,
        KC_LCTL, KC_ESC, KC_LSFT, KC_W, KC_C, KC_R,              KC_MINS,   KC_P7,   KC_P8,   KC_P9, KC_RBRC, KC_TAB,
        KC_LSFT, KC_E, KC_A, KC_S, KC_D, KC_G,                   KC_PPLS,   KC_P4,   KC_P5,   KC_P6, KC_PAST, KC_ENT,
        XXXXXXX, KC_X, KC_3, KC_LSFT, KC_F, KC_5,                KC_0,      KC_P1,   KC_P2,   KC_P3, KC_PSLS, KC_DOT,
