@@ -28,6 +28,46 @@ enum charybdis_keymap_layers {
     LAYER_TEST,
 };
 
+//combos
+const uint16_t PROGMEM pageup[] = {KC_W, KC_E, COMBO_END};
+const uint16_t PROGMEM pagedn[] = {KC_X, KC_C, COMBO_END};
+const uint16_t PROGMEM alt[] = {KC_S, KC_D, COMBO_END};
+const uint16_t PROGMEM alt1[] = {KC_W, KC_R, COMBO_END};
+const uint16_t PROGMEM alt2[] = {KC_X, KC_V, COMBO_END};
+const uint16_t PROGMEM lent[] = {KC_Q, KC_W, COMBO_END};
+const uint16_t PROGMEM f2[] = {KC_R, KC_T, COMBO_END};
+const uint16_t PROGMEM rctl[] = {KC_K, KC_L, COMBO_END};
+const uint16_t PROGMEM lclick[] = {KC_Y, KC_U, COMBO_END};
+const uint16_t PROGMEM rclick[] = {KC_U, KC_I, COMBO_END};
+const uint16_t PROGMEM rpgup[] = {KC_O, KC_I, COMBO_END};
+const uint16_t PROGMEM rpgdn[] = {KC_COMM, KC_DOT, COMBO_END};
+const uint16_t PROGMEM tabcyclefwd[] = {KC_M, KC_COMM, COMBO_END};
+const uint16_t PROGMEM tabcyclebk[] = {KC_N, KC_M, COMBO_END};
+const uint16_t PROGMEM ralt1[] = {KC_U, KC_O, COMBO_END};
+const uint16_t PROGMEM ralt2[] = {KC_DOT, KC_M, COMBO_END};
+
+
+
+combo_t key_combos[] = {
+    COMBO(pageup, KC_PGUP),
+    COMBO(pagedn, KC_PGDN), 
+    COMBO(alt, OSM(MOD_LALT)),
+    COMBO(alt1, A(KC_1)),
+    COMBO(alt2, A(KC_2)),
+    COMBO(lent, KC_ENT),
+    COMBO(f2, KC_F2),
+    COMBO(rctl, KC_RCTL),
+    COMBO(lclick, KC_MS_BTN1),
+    COMBO(rclick, KC_MS_BTN2),
+    COMBO(rpgup, KC_PGUP),
+    COMBO(rpgdn, KC_PGDN),
+    COMBO(tabcyclefwd, C(KC_PGDN)),
+    COMBO(tabcyclebk, C(KC_PGUP)),
+    COMBO(ralt1, A(KC_1)),
+    COMBO(ralt2, A(KC_2)),
+
+};
+
 /** \brief Automatically enable sniping-mode on the pointer layer. */
 #define CHARYBDIS_AUTO_SNIPING_ON_LAYER LAYER_POINTER
 
