@@ -69,6 +69,7 @@ combo_t key_combos[] = {
 };
 
 /** \brief Automatically enable sniping-mode on the pointer layer. */
+
 #define CHARYBDIS_AUTO_SNIPING_ON_LAYER LAYER_POINTER
 
 #ifdef CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_ENABLE
@@ -82,6 +83,7 @@ static uint16_t auto_pointer_layer_timer = 0;
 #        define CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_THRESHOLD 8
 #    endif // CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_THRESHOLD
 #endif     // CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_ENABLE
+
 
 #define LOWER MO(LAYER_LOWER)
 #define RAISE MO(LAYER_RAISE)
@@ -110,9 +112,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [LAYER_LOWER] = LAYOUT(
        KC_TAB, KC_O,   KC_F2, KC_I,  KC_LEFT, KC_RGHT,          KC_CIRC,   KC_AMPR, KC_ASTR, KC_LPRN, KC_TRNS, KC_TRNS,
-       KC_LCTL, KC_ESC, KC_LSFT, KC_W, KC_C, KC_R,              KC_MINS,   KC_P7,   KC_P8,   KC_P9, KC_RBRC, KC_TAB,
-       KC_LSFT, KC_E, KC_A, KC_S, KC_D, KC_G,                   KC_PPLS,   KC_P4,   KC_P5,   KC_P6, KC_PAST, KC_ENT,
-       XXXXXXX, KC_X, KC_3, KC_LSFT, KC_F, KC_5,                KC_0,      KC_P1,   KC_P2,   KC_P3, KC_PSLS, KC_DOT,
+       KC_LCTL, KC_ESC, KC_LSFT, KC_W, KC_C, KC_R,              KC_MINS,   KC_7,   KC_8,   KC_9, KC_RBRC, KC_TAB,
+       KC_LSFT, KC_E, KC_A, KC_S, KC_D, KC_G,                   KC_PPLS,   KC_4,   KC_5,   KC_6, KC_PAST, KC_ENT,
+       XXXXXXX, KC_X, KC_3, KC_LSFT, KC_F, KC_5,                KC_0,      KC_1,   KC_2,   KC_3, KC_PSLS, KC_DOT,
   
                                   KC_Z, KC_SPC, KC_LALT,        XXXXXXX, _______,
                                            KC_B, XXXXXXX,       KC_P0
