@@ -42,8 +42,8 @@ const uint16_t PROGMEM rpgup[] = {KC_L, KC_K, COMBO_END};
 const uint16_t PROGMEM rpgdn[] = {KC_COMM, KC_DOT, COMBO_END};
 const uint16_t PROGMEM tabcyclefwd[] = {KC_M, KC_COMM, COMBO_END};
 const uint16_t PROGMEM tabcyclebk[] = {KC_N, KC_M, COMBO_END};
-const uint16_t PROGMEM ralt1[] = {KC_H, KC_K, COMBO_END};
-const uint16_t PROGMEM ralt2[] = {KC_DOT, KC_M, COMBO_END};
+const uint16_t PROGMEM ralt1[] = {KC_L, KC_SCLN, COMBO_END};
+const uint16_t PROGMEM ralt2[] = {KC_DOT, KC_SLSH, COMBO_END};
 
 
 
