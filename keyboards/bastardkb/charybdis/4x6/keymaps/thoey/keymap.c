@@ -54,7 +54,7 @@ combo_t key_combos[] = {
     COMBO(alt, OSM(MOD_LALT)),
     COMBO(alt1, A(KC_1)),
     COMBO(alt2, A(KC_2)),
-    COMBO(ltabcycfwe, C(KC_PGUP)),
+    COMBO(ltabcycfwd, C(KC_PGUP)),
     COMBO(ltabcycbk, C(KC_PGDN)),
     COMBO(f2, KC_F2),
     COMBO(rpgup, KC_PGUP),
