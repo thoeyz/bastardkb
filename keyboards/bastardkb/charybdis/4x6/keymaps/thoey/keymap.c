@@ -101,7 +101,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_BASE] = LAYOUT(
 
         KC_MS_BTN1, KC_MS_BTN2, KC_F2, KC_ENT, S(KC_9),      S(KC_0),               CW_TOGG,  KC_7,          KC_ENT,   RGB_TOG, TG(3),   TG(1),
-        KC_ESC,     KC_ESC,     KC_W,  KC_E,   KC_R,         KC_T,                  KC_Y,     KC_U,          KC_I,     KC_O,    KC_Y,    KC_BSLS,
+        CW_TOGG,    KC_ESC,     KC_W,  KC_E,   KC_R,         KC_T,                  KC_Y,     KC_U,          KC_I,     KC_O,    KC_Y,    KC_BSLS,
         KC_Q,       LT(3,KC_A), KC_S,  KC_D,   LSFT_T(KC_F), KC_G,                  KC_H,     RSFT_T(KC_J),  KC_K,     KC_L,    KC_SCLN, LCTL_T(KC_P),
         DRGSCRL,    KC_Z,       KC_X,  KC_C,   KC_V,         KC_B,                  KC_N,     KC_M,          KC_COMM,  KC_DOT,  KC_SLSH, DRGSCRL,
   
@@ -111,9 +111,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [LAYER_LOWER] = LAYOUT(
        KC_TAB,  KC_O,   KC_F2,   KC_I,    KC_LEFT, KC_RGHT,          KC_CIRC,   KC_AMPR, KC_ASTR, KC_LPRN, KC_TRNS, KC_TRNS,
-       KC_LCTL, KC_ESC, KC_LSFT, KC_W,    KC_C,    KC_R,             KC_MINS,   KC_7,    KC_8,    KC_9,    KC_RBRC, KC_TAB,
+       XXXXXXX, KC_ESC, KC_LSFT, KC_W,    KC_C,    KC_R,             KC_MINS,   KC_7,    KC_8,    KC_9,    KC_RBRC, KC_TAB,
        KC_LSFT, KC_E,   KC_A,    KC_S,    KC_D,    KC_G,             KC_PPLS,   KC_4,    KC_5,    KC_6,    KC_PAST, KC_ENT,
-       XXXXXXX, KC_X,   KC_3,    KC_LSFT, KC_F,    KC_5,             KC_0,      KC_1,    KC_2,    KC_3,    KC_PSLS, KC_DOT,
+       KC_LCTL, KC_X,   KC_3,    KC_LSFT, KC_F,    KC_5,             KC_0,      KC_1,    KC_2,    KC_3,    KC_PSLS, KC_DOT,
   
                                   KC_Z, KC_SPC, KC_LALT,        XXXXXXX, _______,
                                            KC_B, XXXXXXX,       KC_P0
@@ -134,13 +134,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [LAYER_POINTER] = LAYOUT(
   
-       KC_BTN1, KC_BTN2, XXXXXXX, XXXXXXX, S(C(G(KC_B))), G(S(KC_RGHT)),        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX,
-       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,       C(A(KC_DEL)),         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-       XXXXXXX, XXXXXXX, DRGSCRL, SNIPING, KC_LGUI,       XXXXXXX,              XXXXXXX, KC_BTN1, KC_BTN3, KC_BTN2, KC_RGUI, XXXXXXX,
-       DRGSCRL, _______, DRGSCRL, SNIPING, XXXXXXX,       XXXXXXX,              XXXXXXX, KC_BTN1, KC_BTN3, KC_BTN2, _______, DRGSCRL,
+       KC_BTN1, KC_BTN2, XXXXXXX, XXXXXXX, S(C(G(KC_B))), G(S(KC_RGHT)),        XXXXXXX, XXXXXXX,    KC_TRNS,    XXXXXXX, XXXXXXX, XXXXXXX,
+       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,       C(A(KC_DEL)),         XXXXXXX, XXXXXXX,    KC_F5,      XXXXXXX, XXXXXXX, XXXXXXX,
+       XXXXXXX, XXXXXXX, DRGSCRL, SNIPING, KC_BTN1,       KC_LGUI,              A(KC_1), C(KC_PGUP), C(KC_PGDN), KC_BTN2, KC_RGUI, KC_TRNS,
+       DRGSCRL, _______, DRGSCRL, SNIPING, XXXXXXX,       XXXXXXX,              A(KC_2), KC_BTN1,    KC_BTN3,    KC_BTN2, KC_RCTL, DRGSCRL,
   
-                                  KC_BTN2, KC_BTN1, KC_BTN3,                    KC_BTN3, KC_BTN1,
-                                           KC_BTN1, KC_BTN2,                    KC_BTN2
+                                          KC_BTN2, KC_BTN1, KC_BTN3,            KC_BTN3, KC_BTN1,
+                                                   KC_BTN1, KC_BTN2,            KC_BTN2
   //                            
   ),
 
