@@ -135,12 +135,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_POINTER] = LAYOUT(
   
        KC_BTN1, KC_BTN2, XXXXXXX, XXXXXXX, S(C(G(KC_B))), G(S(KC_RGHT)),        XXXXXXX, XXXXXXX,    KC_TRNS,    XXXXXXX, _______, _______,
-       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,       C(A(KC_DEL)),         XXXXXXX, C(KC_T),    KC_F5,      C(KC_W), XXXXXXX, XXXXXXX,
+       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,       C(A(KC_DEL)),         XXXXXXX, XXXXXXX,    C(KC_T),    C(KC_W), XXXXXXX, XXXXXXX,
        XXXXXXX, XXXXXXX, DRGSCRL, SNIPING, KC_BTN1,       KC_LGUI,              A(KC_1), C(KC_PGUP), C(KC_PGDN), KC_BTN2, KC_RGUI, KC_TRNS,
        DRGSCRL, _______, DRGSCRL, SNIPING, XXXXXXX,       XXXXXXX,              A(KC_2), KC_BTN1,    KC_BTN3,    KC_BTN2, KC_RCTL, DRGSCRL,
   
                                           KC_BTN2, KC_BTN1, KC_BTN3,            KC_WFWD, KC_WBAK,
-                                                   KC_BTN1, KC_BTN2,            KC_BTN2
+                                                   KC_BTN1, KC_BTN2,            KC_F5
   //                            
   ),
 
