@@ -45,7 +45,7 @@ const uint16_t PROGMEM rtabcycfwd[] = {KC_M, KC_COMM, COMBO_END};
 const uint16_t PROGMEM rtabcycbk[] = {KC_N, KC_M, COMBO_END};
 const uint16_t PROGMEM ralt1[] = {KC_L, KC_SCLN, COMBO_END};
 const uint16_t PROGMEM ralt2[] = {KC_DOT, KC_SLSH, COMBO_END};
-
+const uint16_t PROGMEM f5[] = {KC_BTN1, KC_BTN2, COMBO_END};
 
 
 combo_t key_combos[] = {
@@ -63,6 +63,7 @@ combo_t key_combos[] = {
     COMBO(rtabcycbk, C(KC_PGUP)),
     COMBO(ralt1, A(KC_1)),
     COMBO(ralt2, A(KC_2)),
+    COMBO(f5, KC_F5),
 
 };
 
@@ -140,7 +141,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        DRGSCRL, _______, DRGSCRL, SNIPING, XXXXXXX,       XXXXXXX,              A(KC_2), KC_BTN1,    DRGSCRL,    KC_BTN2, KC_RCTL, DRGSCRL,
   
                                           KC_BTN2, KC_BTN1, KC_BTN3,            KC_WFWD, KC_WBAK,
-                                                   KC_BTN1, KC_BTN2,            KC_F5
+                                                   KC_BTN1, KC_BTN2,            KC_HOME
   //                            
   ),
 
