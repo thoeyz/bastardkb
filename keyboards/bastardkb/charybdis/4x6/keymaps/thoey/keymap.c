@@ -139,7 +139,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        XXXXXXX, XXXXXXX, DRGSCRL, SNIPING, KC_BTN1,       KC_LGUI,              A(KC_1), C(KC_PGUP), C(KC_PGDN), KC_BTN2, KC_RGUI, KC_TRNS,
        DRGSCRL, _______, DRGSCRL, SNIPING, XXXXXXX,       XXXXXXX,              A(KC_2), KC_BTN1,    KC_BTN3,    KC_BTN2, KC_RCTL, DRGSCRL,
   
-                                          KC_BTN2, KC_BTN1, KC_BTN3,            KC_BTN3, KC_BTN1,
+                                          KC_BTN2, KC_BTN1, KC_BTN3,            KC_WWFWD, KC_WWBAK,
                                                    KC_BTN1, KC_BTN2,            KC_BTN2
   //                            
   ),
