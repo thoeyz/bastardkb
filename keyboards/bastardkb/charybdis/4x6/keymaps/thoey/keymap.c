@@ -104,9 +104,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_MS_BTN1, KC_MS_BTN2, KC_F2, KC_ENT, S(KC_9),      S(KC_0),               CW_TOGG,  KC_7,          KC_ENT,   RGB_TOG, TG(3),         TG(1),
         CW_TOGG,    KC_ESC,     KC_W,  KC_E,   KC_R,         KC_T,                  KC_Y,     KC_U,          KC_I,     KC_O,    KC_Y,          KC_BSLS,
         KC_Q,       LT(3,KC_A), KC_S,  KC_D,   LSFT_T(KC_F), KC_G,                  KC_H,     RSFT_T(KC_J),  KC_K,     KC_L,    KC_SCLN,       LCTL_T(KC_P),
-        DRGSCRL,    KC_Z,       KC_X,  KC_C,   KC_V,         KC_B,                  KC_N,     KC_M,          KC_COMM,  KC_DOT,  LT(3,KC_SLSH), DRGSCRL,
+        DRGSCRL,    KC_Z,       KC_X,  KC_C,   KC_V,         KC_B,                  KC_N,     KC_M,          KC_COMM,  KC_DOT,  KC_SLSH,       DRGSCRL,
   
-                             LT(1,KC_TAB), LCTL_T(KC_BSPC), MO(2),                 RAISE, LT(1,KC_SPC),
+                             LT(1,KC_TAB), LCTL_T(KC_BSPC), MO(2),                 LT(3,KC_HOME), LT(1,KC_SPC),
                                                 KC_BTN1, KC_BTN2,                  A(KC_LSFT)
   ),
 
@@ -135,7 +135,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [LAYER_POINTER] = LAYOUT(
   
-       KC_BTN1, KC_BTN2, XXXXXXX, XXXXXXX, S(C(G(KC_B))), G(S(KC_RGHT)),        XXXXXXX, XXXXXXX,    KC_TRNS,    XXXXXXX, _______, _______,
+       KC_BTN1, KC_BTN2, XXXXXXX, XXXXXXX, S(C(G(KC_B))), G(S(KC_RGHT)),        QK_BOOT, XXXXXXX,    KC_TRNS,    XXXXXXX, _______, _______,
        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,       C(A(KC_DEL)),         XXXXXXX, XXXXXXX,    C(KC_T),    C(KC_W), KC_BTN3, XXXXXXX,
        XXXXXXX, XXXXXXX, DRGSCRL, SNIPING, KC_BTN1,       KC_LGUI,              A(KC_1), C(KC_PGUP), C(KC_PGDN), KC_BTN2, KC_RGUI, KC_TRNS,
        DRGSCRL, _______, DRGSCRL, SNIPING, XXXXXXX,       XXXXXXX,              A(KC_2), KC_BTN1,    DRGSCRL,    KC_BTN2, KC_RCTL, DRGSCRL,
