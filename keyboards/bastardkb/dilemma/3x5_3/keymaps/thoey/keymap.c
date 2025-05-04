@@ -45,8 +45,8 @@ const uint16_t PROGMEM tabcyclefwd[] = {KC_M, KC_COMM, COMBO_END};
 const uint16_t PROGMEM tabcyclebk[] = {KC_N, KC_M, COMBO_END};
 const uint16_t PROGMEM ralt1[] = {KC_U, KC_O, COMBO_END};
 const uint16_t PROGMEM ralt2[] = {KC_DOT, KC_M, COMBO_END};
-
-
+const uint16_t PROGMEM gamei[] = {KC_SPC, KC_5, COMBO_END};
+const uint16_t PROGMEM gamef2[] = {KC_SPC, KC_F, COMBO_END};
 
 combo_t key_combos[] = {
     COMBO(pageup, KC_PGUP),
@@ -65,6 +65,8 @@ combo_t key_combos[] = {
     COMBO(tabcyclebk, C(KC_PGUP)),
     COMBO(ralt1, A(KC_1)),
     COMBO(ralt2, A(KC_2)),
+    COMBO(gamei, KC_I),
+    COMBO(gamef2, KC_F2),
 
 };
 
