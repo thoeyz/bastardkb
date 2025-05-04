@@ -49,6 +49,9 @@ const uint16_t PROGMEM gamei[] = {KC_F, KC_5, COMBO_END};
 const uint16_t PROGMEM gamef2[] = {KC_C, KC_R, COMBO_END};
 const uint16_t PROGMEM gamectl[] = {KC_X, KC_SPC, COMBO_END};
 const uint16_t PROGMEM gameq[] = {KC_X, KC_3, COMBO_END};
+const uint16_t PROGMEM gameo[] = {KC_ESC, KC_LSFT, COMBO_END};
+const uint16_t PROGMEM gameleft[] = {KC_B, KC_3, COMBO_END};
+const uint16_t PROGMEM gameright[] = {KC_B, KC_F, COMBO_END};
 
 
 combo_t key_combos[] = {
@@ -72,6 +75,9 @@ combo_t key_combos[] = {
     COMBO(gamef2, KC_F2),
     COMBO(gamectl, KC_LCTL),
     COMBO(gameq, KC_Q),
+    COMBO(gameo, KC_O),
+    COMBO(gameleft, KC_LEFT),
+    COMBO(gameright, KC_RGHT),
 
 };
 
@@ -98,8 +104,8 @@ combo_t key_combos[] = {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_BASE] = LAYOUT_split_3x5_3(
        KC_Q,          KC_W,    KC_E,    KC_R,           KC_T,                    KC_Y,    KC_U,         KC_I,     KC_O,    KC_P,
-       LT(3,KC_A),    KC_S,    KC_D,    LSFT_T(KC_F),   KC_G,                    KC_H,    RSFT_T(KC_J), KC_K,     KC_L,    LT(3,KC_SCLN),
-       LT(2,KC_Z),    KC_X,    KC_C,    KC_V,           KC_B,                    KC_N,    KC_M,         KC_COMM,  KC_DOT,  PT_SLSH,
+       LT(2,KC_A),    KC_S,    KC_D,    LSFT_T(KC_F),   KC_G,                    KC_H,    RSFT_T(KC_J), KC_K,     KC_L,    KC_SCLN,
+       LT(3,KC_Z),    KC_X,    KC_C,    KC_V,           KC_B,                    KC_N,    KC_M,         KC_COMM,  KC_DOT,  LT(3,PT_SLSH),
                        TG(1),   LCTL_T(KC_TAB), LT(2,KC_BSPC),                   KC_SPC,  LT(1,KC_ENT), RGB_TOG
   ),
 
@@ -122,9 +128,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * from the base layer to enable auto-repeat.
  */
   [LAYER_FUNCTION] = LAYOUT_split_3x5_3(
-    LT(3,KC_ESC),   KC_LSFT,  KC_W,        KC_C,    KC_R,             KC_MINS,   KC_7,   KC_8,   KC_9,  KC_F12,
+    KC_ESC,         KC_LSFT,  KC_W,        KC_C,    KC_R,             KC_MINS,   KC_7,   KC_8,   KC_9,  KC_F12,
     KC_E,           KC_A,     KC_S,        KC_D,    KC_G,             KC_PPLS,   KC_4,   KC_5,   KC_6,  KC_PAST,
-    KC_X,           KC_3,     LT(3,KC_B),  KC_F,    KC_5,             KC_0,      KC_1,   KC_2,   KC_3,  KC_PSLS,
+    KC_X,           KC_3,     KC_B,        KC_F,    KC_5,             KC_0,      KC_1,   KC_2,   KC_3,  KC_PSLS,
                                   TG(1),  KC_LALT, KC_SPC,           XXXXXXX, XXXXXXX, XXXXXXX
   ),
 
@@ -150,10 +156,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * symmetrical to accomodate the left- and right-hand trackball.
  */
   [LAYER_MEDIA] = LAYOUT_split_3x5_3(
-    QK_BOOT, KC_MS_LEFT, KC_MS_UP,   KC_MS_RIGHT,  XXXXXXX,                     XXXXXXX,RGB_RMOD, RGB_TOG, RGB_MOD, QK_BOOT,
-    XXXXXXX, KC_MS_BTN2, KC_MS_DOWN, KC_MS_BTN1,   DRGSCRL,                     KC_MPRV, KC_VOLD, KC_MUTE, KC_VOLU, KC_MNXT,
-    C(A(KC_DEL)), XXXXXXX, XXXXXXX, S(C(G(KC_B))), G(S(KC_RGHT)),              XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-                            _______, XXXXXXX, KC_LCTL,                         KC_MS_BTN1, KC_MS_BTN2, KC_MUTE
+    QK_BOOT,      XXXXXXX,    XXXXXXX,    S(C(G(KC_B))), G(S(KC_RGHT)),               XXXXXXX,RGB_RMOD, RGB_TOG, RGB_MOD, QK_BOOT,
+    XXXXXXX,      KC_MS_BTN2, KC_MS_UP,   KC_MS_BTN1,    DRGSCRL,                     KC_MPRV, KC_VOLD, KC_MUTE, KC_VOLU, KC_MNXT,
+    C(A(KC_DEL)), KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT,   DRGSCRL,                     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+                                   _______, C(A(KC_DEL)), KC_LCTL,                         KC_MS_BTN1, KC_MS_BTN2, KC_MUTE
   ),
 
 /** \brief Mouse emulation and pointer functions. */
