@@ -161,7 +161,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     QK_BOOT,      XXXXXXX,    XXXXXXX,    S(C(G(KC_B))), G(S(KC_RGHT)),               XXXXXXX,RGB_RMOD, RGB_TOG, RGB_MOD, QK_BOOT,
     XXXXXXX,      KC_MS_BTN2, KC_MS_UP,   KC_MS_BTN1,    DRGSCRL,                     KC_MPRV, KC_VOLD, KC_MUTE, KC_VOLU, KC_MNXT,
     C(A(KC_DEL)), KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT,   DRGSCRL,                     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-                                   _______, C(A(KC_DEL)), KC_LCTL,                         KC_MS_BTN1, KC_MS_BTN2, KC_MUTE
+                                   _______, C(A(KC_DEL)), TG(1),                         KC_MS_BTN1, KC_MS_BTN2, KC_MUTE
   ),
 
 /** \brief Mouse emulation and pointer functions. */
