@@ -158,10 +158,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * symmetrical to accomodate the left- and right-hand trackball.
  */
   [LAYER_MEDIA] = LAYOUT_split_3x5_3(
-    QK_BOOT,      XXXXXXX,    XXXXXXX,    S(C(G(KC_B))), G(S(KC_RGHT)),               XXXXXXX,RGB_RMOD, RGB_TOG, RGB_MOD, QK_BOOT,
-    XXXXXXX,      KC_MS_BTN2, KC_MS_UP,   KC_MS_BTN1,    DRGSCRL,                     KC_MPRV, KC_VOLD, KC_MUTE, KC_VOLU, KC_MNXT,
-    C(A(KC_DEL)), KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT,   DRGSCRL,                     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-                                   _______, C(A(KC_DEL)), TG(1),                         KC_MS_BTN1, KC_MS_BTN2, KC_MUTE
+    QK_BOOT,      XXXXXXX,    XXXXXXX,    S(C(G(KC_B))), G(S(KC_RGHT)),               XXXXXXX, RGB_RMOD,   RGB_TOG,    RGB_MOD,     QK_BOOT,
+    XXXXXXX,      KC_MS_BTN2, KC_MS_UP,   KC_MS_BTN1,    DRGSCRL,                     XXXXXXX, KC_MS_BTN1, KC_MS_UP,   KC_MS_BTN2,  KC_MNXT,
+    C(A(KC_DEL)), KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT,   DRGSCRL,                     XXXXXXX, KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT, XXXXXXX,
+                                   _______, C(A(KC_DEL)), TG(1),                      KC_MS_BTN1, KC_MS_BTN2, KC_MUTE
   ),
 
 /** \brief Mouse emulation and pointer functions. */
