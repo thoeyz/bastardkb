@@ -45,15 +45,15 @@ const uint16_t PROGMEM tabcyclefwd[] = {KC_M, KC_COMM, COMBO_END};
 const uint16_t PROGMEM tabcyclebk[] = {KC_N, KC_M, COMBO_END};
 const uint16_t PROGMEM ralt1[] = {KC_U, KC_O, COMBO_END};
 const uint16_t PROGMEM ralt2[] = {KC_DOT, KC_M, COMBO_END};
-const uint16_t PROGMEM gamei[] = {KC_F, KC_5, COMBO_END};
+const uint16_t PROGMEM gamei[] = {KC_F, KC_Z, COMBO_END};
 const uint16_t PROGMEM gamef2[] = {KC_C, KC_R, COMBO_END};
 const uint16_t PROGMEM gamectl[] = {KC_X, KC_SPC, COMBO_END};
 const uint16_t PROGMEM gameq[] = {KC_X, KC_3, COMBO_END};
 const uint16_t PROGMEM gameo[] = {KC_ESC, KC_LSFT, COMBO_END};
 const uint16_t PROGMEM gameleft[] = {KC_B, KC_3, COMBO_END};
 const uint16_t PROGMEM gameright[] = {KC_B, KC_F, COMBO_END};
-const uint16_t PROGMEM esc[] = {KC_V, KC_B, COMBO_END};
-const uint16_t PROGMEM five[] = {KC_SPC, KC_Z, COMBO_END};
+const uint16_t PROGMEM gameesc[] = {KC_V, KC_B, COMBO_END};
+const uint16_t PROGMEM gamefive[] = {KC_SPC, KC_Z, COMBO_END};
 
 
 combo_t key_combos[] = {
@@ -80,8 +80,8 @@ combo_t key_combos[] = {
     COMBO(gameo, KC_O),
     COMBO(gameleft, KC_LEFT),
     COMBO(gameright, KC_RGHT),
-    COMBO(esc, KC_ESC),
-    COMBO(five, KC_5),
+    COMBO(gameesc, KC_ESC),
+    COMBO(gamefive, KC_5),
 
 };
 
