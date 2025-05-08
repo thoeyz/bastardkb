@@ -53,6 +53,7 @@ const uint16_t PROGMEM gameo[] = {KC_ESC, KC_LSFT, COMBO_END};
 const uint16_t PROGMEM gameleft[] = {KC_B, KC_3, COMBO_END};
 const uint16_t PROGMEM gameright[] = {KC_B, KC_F, COMBO_END};
 const uint16_t PROGMEM esc[] = {KC_V, KC_B, COMBO_END};
+const uint16_t PROGMEM z[] = {KC_SPC, KC_5, COMBO_END};
 
 
 combo_t key_combos[] = {
@@ -80,6 +81,7 @@ combo_t key_combos[] = {
     COMBO(gameleft, KC_LEFT),
     COMBO(gameright, KC_RGHT),
     COMBO(esc, KC_ESC),
+    COMBO(z, KC_Z),
 
 };
 
