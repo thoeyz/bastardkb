@@ -107,7 +107,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         DRGSCRL,    KC_Z,       KC_X,  KC_C,   KC_V,         KC_B,                  KC_N,     KC_M,          KC_COMM,  KC_DOT,  KC_SLSH,       DRGSCRL,
   
                              LT(1,KC_TAB), LCTL_T(KC_BSPC), MO(2),                 LT(3,KC_HOME), LT(1,KC_SPC),
-                                                KC_BTN2, KC_BTN1,                  A(KC_LSFT)
+                                                KC_BTN1, KC_BTN2,                  A(KC_LSFT)
   ),
 
   [LAYER_LOWER] = LAYOUT(
