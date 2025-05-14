@@ -109,7 +109,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_Q,       LT(3,KC_A), KC_S,  KC_D,   LSFT_T(KC_F), KC_G,                  KC_H,     RSFT_T(KC_J),  KC_K,     KC_L,    LT(1,KC_SCLN), LCTL_T(KC_P),
         DRGSCRL,    KC_Z,       KC_X,  KC_C,   KC_V,         KC_B,                  KC_N,     KC_M,          KC_COMM,  KC_DOT,  LT(3,KC_SLSH), DRGSCRL,
   
-                             LT(1,KC_TAB), LCTL_T(KC_BSPC), MO(2),                 LT(3,KC_HOME), KC_SPC,
+                             LT(1,KC_TAB), LCTL_T(KC_BSPC), MO(2),                 LT(3,KC_HOME), LT(1,KC_SPC),
                                                 KC_BTN1, KC_BTN2,                  A(KC_LSFT)
   ),
 
@@ -143,8 +143,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        XXXXXXX,                     XXXXXXX,                     DRGSCRL, SNIPING, KC_BTN1,       KC_LGUI,                  A(KC_1), C(KC_PGUP), C(KC_PGDN), KC_BTN2, KC_RGUI, KC_TRNS,
        DRGSCRL,                     _______,                     DRGSCRL, SNIPING, XXXXXXX,       XXXXXXX,                  A(KC_2), KC_BTN1,    DRGSCRL,    KC_BTN2, KC_RCTL, DRGSCRL,
   
-                                          KC_BTN2, KC_BTN1, KC_BTN3,                                                        KC_WFWD, KC_WBAK,
-                                                   KC_BTN1, KC_BTN2,                                                        KC_HOME
+                                                                                  KC_BTN2, KC_BTN1, KC_BTN3,                KC_WFWD, KC_WBAK,
+                                                                                           KC_BTN1, KC_BTN2,                KC_HOME
   //                            
   ),
 
