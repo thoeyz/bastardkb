@@ -27,7 +27,7 @@ enum charybdis_keymap_layers {
     LAYER_LOWER,
     LAYER_RAISE,
     LAYER_POINTER,
-    LAYER_TEST,
+    LAYER_ONEHANDED,
 };
 
 //combos
@@ -47,7 +47,7 @@ const uint16_t PROGMEM ralt1[] = {KC_L, KC_SCLN, COMBO_END};
 const uint16_t PROGMEM ralt2[] = {KC_DOT, KC_SLSH, COMBO_END};
 const uint16_t PROGMEM f5[] = {KC_BTN1, KC_BTN2, COMBO_END};
 const uint16_t PROGMEM esc[] = {KC_V, KC_B, COMBO_END};
-
+const uint16_t PROGMEM layer5[] = {KC_ESC, KC_W, COMBO_END};
 
 
 combo_t key_combos[] = {
@@ -67,6 +67,7 @@ combo_t key_combos[] = {
     COMBO(ralt2, A(KC_2)),
     COMBO(f5, KC_F5),
     COMBO(esc, KC_ESC),
+    COMBO(layer5, OSL(4)),
 
 };
 
@@ -145,22 +146,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   
                                                                                   KC_BTN2, KC_BTN1, KC_BTN3,                KC_WFWD, KC_WBAK,
                                                                                            KC_BTN1, KC_BTN2,                KC_HOME
-  //                            
+     
   ),
 
- [LAYER_TEST] = LAYOUT(
-  // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
-       QK_BOOT,  EE_CLR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, QK_BOOT,  EE_CLR,
-  // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, DPI_MOD, S_D_MOD,    S_D_MOD, DPI_MOD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-  // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX,    XXXXXXX, KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI, XXXXXXX,
-  // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX, _______, DRGSCRL, SNIPING, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, SNIPING, DRGSCRL, _______, XXXXXXX,
-  // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
-                                  KC_BTN2, KC_BTN1, KC_BTN3,    KC_BTN3, KC_BTN1,
-                                           XXXXXXX, KC_BTN2,    KC_BTN2
-  //                            ╰───────────────────────────╯ ╰──────────────────╯
+ [LAYER_ONEHANDED] = LAYOUT(
+
+       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, QK_BOOT,            QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+       XXXXXXX, KC_P,    KC_O,    KC_I,    KC_U,    KC_Y,               S_D_MOD, DPI_MOD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+       XXXXXXX, KC_LGUI, KC_L,    KC_K,    KC_J,    KC_H,               XXXXXXX, KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI, XXXXXXX,
+       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_M,    KC_N,               XXXXXXX, XXXXXXX, SNIPING, DRGSCRL, _______, XXXXXXX,
+
+                                  KC_BTN2, KC_BTN1, KC_BTN3,            KC_BTN3, KC_BTN1,
+                                           XXXXXXX, KC_BTN2,            KC_BTN2p
   ),
 };
 // clang-format on
