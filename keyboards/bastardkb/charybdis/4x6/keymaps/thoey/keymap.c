@@ -47,7 +47,7 @@ const uint16_t PROGMEM ralt1[] = {KC_L, KC_SCLN, COMBO_END};
 const uint16_t PROGMEM ralt2[] = {KC_DOT, KC_SLSH, COMBO_END};
 const uint16_t PROGMEM f5[] = {KC_BTN1, KC_BTN2, COMBO_END};
 const uint16_t PROGMEM esc[] = {KC_V, KC_B, COMBO_END};
-const uint16_t PROGMEM layer5[] = {KC_ESC, KC_W, COMBO_END};
+const uint16_t PROGMEM layer5[] = {KC_U, KC_W, COMBO_END};
 
 
 combo_t key_combos[] = {
