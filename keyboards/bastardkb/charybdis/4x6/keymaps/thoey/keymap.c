@@ -31,8 +31,7 @@ enum charybdis_keymap_layers {
 };
 
 //combos
-const uint16_t PROGMEM y[] = {RSFT_T(KC_J), KC_H, COMBO_END};
-const uint16_t PROGMEM u[] = {RSFT_T(KC_J), KC_K, COMBO_END};
+const uint16_t PROGMEM y[] = {RSFT_T(KC_J), KC_K, COMBO_END};
 const uint16_t PROGMEM pageup[] = {KC_W, KC_E, COMBO_END};
 const uint16_t PROGMEM pagedn[] = {KC_X, KC_C, COMBO_END};
 const uint16_t PROGMEM alt[] = {KC_S, KC_D, COMBO_END};
@@ -54,7 +53,6 @@ const uint16_t PROGMEM layer4[] = {MO(2), LT(3,KC_A), COMBO_END};
 
 combo_t key_combos[] = {
     COMBO(y, KC_Y),
-    COMBO(u, KC_U),
     COMBO(pageup, KC_PGUP),
     COMBO(pagedn, KC_PGDN), 
     COMBO(alt, OSM(MOD_LALT)),
@@ -134,7 +132,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_F12,   KC_F1,    KC_F2,      KC_F3,   KC_F4,      KC_F5,            KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,
        KC_MNXT,  XXXXXXX,  XXXXXXX,    KC_4,    KC_5,       KC_6,             KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS, KC_VOLU,
        KC_MPLY,  KC_RBRC,  KC_LEFT,    KC_UP,   KC_RGHT,    KC_HOME,          XXXXXXX, KC_RSFT, KC_RCTL, KC_RALT, KC_QUOT, XXXXXXX,
-       XXXXXXX,  KC_HOME,  A(KC_LEFT), KC_DOWN, A(KC_RGHT), KC_END,           XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+       XXXXXXX,  KC_HOME,  A(KC_LEFT), KC_DOWN, A(KC_RGHT), KC_END,           RGB_MOD, RGB_RMOD, XXXXXXX, XXXXXXX, QK_UNDERGLOW_VALUE_UP, QK_UNDERGLOW_VALUE_DOWN,
 
                                   _______, _______, XXXXXXX,                  KC_EQL, KC_LBRC,
                                            _______, _______,                  XXXXXXX
