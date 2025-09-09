@@ -48,7 +48,7 @@ const uint16_t PROGMEM ralt2[] = {KC_DOT, KC_M, COMBO_END};
 const uint16_t PROGMEM layer5[] = {LT(2,KC_A), LT(2,KC_BSPC), COMBO_END};
 const uint16_t PROGMEM layer4[] = {LT(2,KC_A), LCTL_T(KC_TAB), COMBO_END};
 const uint16_t PROGMEM layer42[] = {LT(2,KC_A), KC_S, COMBO_END};
-const uint16_t PROGMEM div[] = {KC_5, KC_6, COMBO_END};
+const uint16_t PROGMEM divide[] = {KC_5, KC_6, COMBO_END};
 const uint16_t PROGMEM gamei[] = {KC_F, KC_Z, COMBO_END};
 const uint16_t PROGMEM gamef2[] = {KC_C, KC_R, COMBO_END};
 const uint16_t PROGMEM gamectl[] = {KC_X, KC_SPC, COMBO_END};
@@ -80,7 +80,7 @@ combo_t key_combos[] = {
     COMBO(layer5, OSL(5)),
     COMBO(layer4, MO(4)),
     COMBO(layer42, MO(4)),
-    COMBO(div, KC_PSLS),
+    COMBO(divide, KC_PSLS),
     COMBO(gamei, KC_I),
     COMBO(gamef2, KC_F2),
     COMBO(gamectl, KC_LCTL),
