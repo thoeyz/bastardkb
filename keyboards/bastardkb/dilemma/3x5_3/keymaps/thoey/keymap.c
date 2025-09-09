@@ -46,6 +46,9 @@ const uint16_t PROGMEM tabcyclebk[] = {KC_N, KC_M, COMBO_END};
 const uint16_t PROGMEM ralt1[] = {KC_U, KC_O, COMBO_END};
 const uint16_t PROGMEM ralt2[] = {KC_DOT, KC_M, COMBO_END};
 const uint16_t PROGMEM layer5[] = {LT(2,KC_A), LT(2,KC_BSPC), COMBO_END};
+const uint16_t PROGMEM layer4[] = {LT(2,KC_A), LCTL_T(KC_TAB), COMBO_END};
+const uint16_t PROGMEM layer42[] = {LT(2,KC_A), KC_S, COMBO_END};
+const uint16_t PROGMEM div[] = {KC_5, KC_6, COMBO_END};
 const uint16_t PROGMEM gamei[] = {KC_F, KC_Z, COMBO_END};
 const uint16_t PROGMEM gamef2[] = {KC_C, KC_R, COMBO_END};
 const uint16_t PROGMEM gamectl[] = {KC_X, KC_SPC, COMBO_END};
@@ -74,7 +77,10 @@ combo_t key_combos[] = {
     COMBO(tabcyclebk, C(KC_PGUP)),
     COMBO(ralt1, A(KC_1)),
     COMBO(ralt2, A(KC_2)),
-    COMBO(layer5, MO(5)),
+    COMBO(layer5, OSL(5)),
+    COMBO(layer4, MO(4)),
+    COMBO(layer42, MO(4)),
+    COMBO(div, KC_PSLS),
     COMBO(gamei, KC_I),
     COMBO(gamef2, KC_F2),
     COMBO(gamectl, KC_LCTL),
@@ -164,16 +170,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_MEDIA] = LAYOUT_split_3x5_3(
     QK_BOOT,      XXXXXXX,    XXXXXXX,    S(C(G(KC_B))), G(S(KC_RGHT)),               XXXXXXX, RGB_RMOD,   RGB_TOG,    RGB_MOD,     QK_BOOT,
     XXXXXXX,      KC_MS_BTN2, KC_MS_UP,   KC_MS_BTN1,    DRGSCRL,                     XXXXXXX, KC_MS_BTN1, KC_MS_UP,   KC_MS_BTN2,  KC_MNXT,
-    C(A(KC_DEL)), KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT,   DRGSCRL,                     XXXXXXX, KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT, XXXXXXX,
-                                   _______, C(A(KC_DEL)), TG(1),                      KC_MS_BTN1, KC_MS_BTN2, KC_MUTE
+    C(A(KC_DEL)), KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT,   DRGSCRL,                     XXXXXXX, KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT, TG(1),
+                                 XXXXXXX, C(A(KC_DEL)), XXXXXXX,                      KC_MS_BTN1, KC_MS_BTN2, KC_MUTE
   ),
 
 /** \brief Mouse emulation and pointer functions. */
   [LAYER_POINTER] = LAYOUT_split_3x5_3(
-    QK_BOOT,  EE_CLR, XXXXXXX, DPI_MOD, S_D_MOD, S_D_MOD, DPI_MOD, XXXXXXX,  EE_CLR, QK_BOOT,
-    KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, XXXXXXX, XXXXXXX, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
-    _______, DRGSCRL, SNIPING, KC_BTN3, XXXXXXX, XXXXXXX, KC_BTN3, SNIPING, DRGSCRL, _______,
-                      KC_BTN3, KC_BTN2, KC_BTN1, KC_BTN1, KC_BTN2, KC_BTN3
+    QK_BOOT, KC_O,    KC_I, KC_U, KC_Y,             S_D_MOD, DPI_MOD, XXXXXXX,  EE_CLR, QK_BOOT,
+    KC_LGUI, KC_L,    KC_K, KC_J, KC_H,             XXXXXXX, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
+    _______, DRGSCRL, KC_P, KC_M, KC_N,             XXXXXXX, KC_BTN3, SNIPING, DRGSCRL, _______,
+                KC_BTN3, KC_O, KC_BTN1,            KC_BTN1, KC_BTN2, KC_BTN3
   ),
 
 /**
@@ -184,10 +190,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `KC_DOT` is duplicated from the base layer.
  */
   [LAYER_NUMERAL] = LAYOUT_split_3x5_3(
-    KC_LBRC,    KC_7,    KC_8,    KC_9, KC_RBRC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-    KC_SCLN,    KC_4,    KC_5,    KC_6, KC_EQL, XXXXXXX, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
-     KC_DOT,    KC_1,    KC_2,    KC_3, KC_0, XXXXXXX, XXXXXXX, XXXXXXX, KC_RALT, XXXXXXX,
-                       KC_DOT, KC_MINS,    KC_0, XXXXXXX, _______, XXXXXXX
+    KC_LBRC,    KC_7,    KC_8,    KC_9, KC_MINS,                XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+    KC_SCLN,    KC_4,    KC_5,    KC_6, KC_PPLS,                XXXXXXX, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
+     KC_DOT,    KC_1,    KC_2,    KC_3, KC_PAST,                XXXXXXX, XXXXXXX, XXXXXXX, KC_RALT, XXXXXXX,
+                           KC_DOT, KC_DOT, KC_0,                XXXXXXX, _______, XXXXXXX
   ),
 
 /**
