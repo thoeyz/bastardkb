@@ -37,8 +37,10 @@ const uint16_t PROGMEM alt2[] = {KC_X, KC_V, COMBO_END};
 const uint16_t PROGMEM lent[] = {LT(2,KC_A), KC_W, COMBO_END};
 const uint16_t PROGMEM f2[] = {KC_R, KC_T, COMBO_END};
 const uint16_t PROGMEM rctl[] = {KC_K, KC_L, COMBO_END};
-const uint16_t PROGMEM lclick[] = {KC_Y, KC_U, COMBO_END};
-const uint16_t PROGMEM rclick[] = {KC_U, KC_I, COMBO_END};
+const uint16_t PROGMEM Llclick[] = {LSFT_T(KC_F), LT(2,KC_BSPC), COMBO_END};
+const uint16_t PROGMEM Lrclick[] = {LSFT_T(KC_F), KC_G, COMBO_END};
+const uint16_t PROGMEM Rlclick[] = {KC_Y, KC_U, COMBO_END};
+const uint16_t PROGMEM Rrclick[] = {KC_U, KC_I, COMBO_END};
 const uint16_t PROGMEM rpgup[] = {KC_O, KC_I, COMBO_END};
 const uint16_t PROGMEM rpgdn[] = {KC_COMM, KC_DOT, COMBO_END};
 const uint16_t PROGMEM tabcyclefwd[] = {KC_M, KC_COMM, COMBO_END};
@@ -69,8 +71,10 @@ combo_t key_combos[] = {
     COMBO(lent, KC_ENT),
     COMBO(f2, KC_F2),
     COMBO(rctl, KC_RCTL),
-    COMBO(lclick, KC_MS_BTN1),
-    COMBO(rclick, KC_MS_BTN2),
+    COMBO(Llclick, KC_MS_BTN1),
+    COMBO(Lrclick, KC_MS_BTN2),
+    COMBO(Rlclick, KC_MS_BTN1),
+    COMBO(Rrclick, KC_MS_BTN2),
     COMBO(rpgup, KC_PGUP),
     COMBO(rpgdn, KC_PGDN),
     COMBO(tabcyclefwd, C(KC_PGDN)),
