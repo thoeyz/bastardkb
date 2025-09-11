@@ -180,7 +180,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /** \brief Mouse emulation and pointer functions. */
   [LAYER_POINTER] = LAYOUT_split_3x5_3(
-    QK_BOOT, KC_O,    KC_I, KC_U, KC_Y,             S_D_MOD, DPI_MOD, XXXXXXX,  EE_CLR, QK_BOOT,
+    KC_P,    KC_O,    KC_I, KC_U, KC_Y,             S_D_MOD, DPI_MOD, XXXXXXX,  EE_CLR, QK_BOOT,
     KC_LGUI, KC_L,    KC_K, KC_J, KC_H,             XXXXXXX, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
     _______, DRGSCRL, KC_P, KC_M, KC_N,             XXXXXXX, KC_BTN3, SNIPING, DRGSCRL, _______,
                 KC_BTN3, KC_O, KC_BTN1,            KC_BTN1, KC_BTN2, KC_BTN3
