@@ -66,7 +66,7 @@ combo_t key_combos[] = {
     COMBO(pageup, KC_PGUP),
     COMBO(pagedn, KC_PGDN), 
     COMBO(alt, OSM(MOD_LALT)),
-    COMBO(clt, OSM(MOD_LCLT)),
+    COMBO(ctl, OSM(MOD_LCLT)),
     COMBO(alt1, A(KC_1)),
     COMBO(alt2, A(KC_2)),
     COMBO(lent, KC_ENT),
