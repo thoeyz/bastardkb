@@ -120,7 +120,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_Q,          KC_W,    KC_E,    KC_R,           KC_T,                    KC_Y,    KC_U,         KC_I,     KC_O,    KC_P,
        LT(2,KC_A),    KC_S,    KC_D,    LSFT_T(KC_F),   KC_G,                    KC_H,    RSFT_T(KC_J), KC_K,     KC_L,    KC_SCLN,
        LT(3,KC_Z),    KC_X,    KC_C,    KC_V,           KC_B,                    KC_N,    KC_M,         KC_COMM,  KC_DOT,  LT(3,PT_SLSH),
-                       TG(1),   LCTL_T(KC_TAB), LT(2,KC_BSPC),                   KC_SPC,  LT(1,KC_ENT), RGB_TOG
+                               TG(1),   LCTL_T(KC_TAB), LT(2,KC_BSPC),           KC_SPC,  LT(1,KC_ENT), RGB_TOG
   ),
 
 
@@ -147,10 +147,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [LAYER_POINTER] = LAYOUT_split_3x5_3(
-    KC_P,    KC_O,    KC_I,    KC_U,    KC_Y,             S_D_MOD, DPI_MOD, XXXXXXX,  EE_CLR, QK_BOOT,
-    KC_LGUI, KC_L,    KC_K,    KC_J,    KC_H,             XXXXXXX, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
-    _______, DRGSCRL, KC_P,    KC_M,    KC_N,             XXXXXXX, KC_BTN3, SNIPING, DRGSCRL, _______,
-                      KC_BTN3, KC_BSPC, KC_SPC,           KC_BTN1, KC_BTN2, KC_BTN3
+    KC_P,    KC_O,    KC_I,    KC_U,         KC_Y,             S_D_MOD, DPI_MOD, XXXXXXX,  EE_CLR, QK_BOOT,
+    KC_LGUI, KC_L,    KC_K,    RSFT_T(KC_J), KC_H,             XXXXXXX, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
+    _______, DRGSCRL, KC_P,    KC_M,         KC_N,             XXXXXXX, KC_BTN3, SNIPING, DRGSCRL, _______,
+                      KC_BTN3, KC_BSPC,      KC_SPC,           KC_BTN1, KC_BTN2, KC_BTN3
   ),
 
   [LAYER_NUMERAL] = LAYOUT_split_3x5_3(
