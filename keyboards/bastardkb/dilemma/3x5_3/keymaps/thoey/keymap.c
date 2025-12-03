@@ -32,6 +32,7 @@ enum dilemma_keymap_layers {
 const uint16_t PROGMEM pageup[] = {KC_W, KC_E, COMBO_END};
 const uint16_t PROGMEM pagedn[] = {KC_X, KC_C, COMBO_END};
 const uint16_t PROGMEM alt[] = {KC_S, KC_D, COMBO_END};
+const uint16_t PROGMEM ctl[] = {LSFT_T(KC_F), KC_D, COMBO_END};
 const uint16_t PROGMEM alt1[] = {KC_W, KC_R, COMBO_END};
 const uint16_t PROGMEM alt2[] = {KC_X, KC_V, COMBO_END};
 const uint16_t PROGMEM lent[] = {LT(2,KC_A), KC_W, COMBO_END};
@@ -47,9 +48,8 @@ const uint16_t PROGMEM tabcyclefwd[] = {KC_M, KC_COMM, COMBO_END};
 const uint16_t PROGMEM tabcyclebk[] = {KC_N, KC_M, COMBO_END};
 const uint16_t PROGMEM ralt1[] = {KC_U, KC_O, COMBO_END};
 const uint16_t PROGMEM ralt2[] = {KC_DOT, KC_M, COMBO_END};
-const uint16_t PROGMEM layer5[] = {LT(2,KC_A), LT(2,KC_BSPC), COMBO_END};
-const uint16_t PROGMEM layer4[] = {LT(2,KC_A), LCTL_T(KC_TAB), COMBO_END};
-const uint16_t PROGMEM layer42[] = {LT(2,KC_A), KC_S, COMBO_END};
+const uint16_t PROGMEM layer5[] = {LT(3,KC_Z), LT(2,KC_BSPC), COMBO_END};
+const uint16_t PROGMEM layer4[] = {LT(2,KC_A), LT(2,KC_BSPC), COMBO_END};
 const uint16_t PROGMEM divide[] = {KC_5, KC_6, COMBO_END};
 const uint16_t PROGMEM gamei[] = {KC_F, KC_Z, COMBO_END};
 const uint16_t PROGMEM gamef2[] = {KC_C, KC_R, COMBO_END};
@@ -66,6 +66,7 @@ combo_t key_combos[] = {
     COMBO(pageup, KC_PGUP),
     COMBO(pagedn, KC_PGDN), 
     COMBO(alt, OSM(MOD_LALT)),
+    COMBO(clt, OSM(MOD_LCLT)),
     COMBO(alt1, A(KC_1)),
     COMBO(alt2, A(KC_2)),
     COMBO(lent, KC_ENT),
@@ -82,8 +83,7 @@ combo_t key_combos[] = {
     COMBO(ralt1, A(KC_1)),
     COMBO(ralt2, A(KC_2)),
     COMBO(layer5, OSL(5)),
-    COMBO(layer4, MO(4)),
-    COMBO(layer42, MO(4)),
+    COMBO(layer4, OSL(4)),
     COMBO(divide, KC_PSLS),
     COMBO(gamei, KC_I),
     COMBO(gamef2, KC_F2),
@@ -115,8 +115,6 @@ combo_t key_combos[] = {
 #    define SNIPING KC_NO
 #endif // !POINTING_DEVICE_ENABLE
 
-// clang-format off
-/** \brief QWERTY layout (3 rows, 10 columns). */
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_BASE] = LAYOUT_split_3x5_3(
        KC_Q,          KC_W,    KC_E,    KC_R,           KC_T,                    KC_Y,    KC_U,         KC_I,     KC_O,    KC_P,
@@ -125,24 +123,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                        TG(1),   LCTL_T(KC_TAB), LT(2,KC_BSPC),                   KC_SPC,  LT(1,KC_ENT), RGB_TOG
   ),
 
-/*
- * Layers used on the Dilemma.
- *
- * These layers started off heavily inspired by the Miryoku layout, but trimmed
- * down and tailored for a stock experience that is meant to be fundation for
- * further personalization.
- *
- * See https://github.com/manna-harbour/miryoku for the original layout.
- */
 
-/**
- * \brief Function layer.
- *
- * Secondary right-hand layer has function keys mirroring the numerals on the
- * primary layer with extras on the pinkie column, plus system keys on the inner
- * column. App is on the tertiary thumb key and other thumb keys are duplicated
- * from the base layer to enable auto-repeat.
- */
   [LAYER_FUNCTION] = LAYOUT_split_3x5_3(
     KC_ESC,         KC_LSFT,  KC_W,        KC_C,    KC_R,             KC_MINS,   KC_7,   KC_8,   KC_9,  KC_F12,
     KC_E,           KC_A,     KC_S,        KC_D,    KC_G,             KC_PPLS,   KC_4,   KC_5,   KC_6,  KC_PAST,
@@ -150,14 +131,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                   TG(1),  KC_LALT, KC_SPC,            TG(1), XXXXXXX, XXXXXXX
   ),
 
-/**
- * \brief Navigation layer.
- *
- * Primary right-hand layer (left home thumb) is navigation and editing. Cursor
- * keys are on the home position, line and page movement below, clipboard above,
- * caps lock and insert on the inner column. Thumb keys are duplicated from the
- * base layer to avoid having to layer change mid edit and to enable auto-repeat.
- */
   [LAYER_NAVIGATION] = LAYOUT_split_3x5_3(
     A(KC_LSFT), CW_TOGG,    KC_4,    KC_5,       KC_6,               KC_7,    KC_8,       KC_9,    KC_0,       KC_MINS,
     KC_RBRC,    KC_LEFT,    KC_UP,   KC_RGHT,    KC_HOME,            XXXXXXX, KC_MS_BTN1, KC_DOWN, KC_MS_BTN2, KC_QUOT,
@@ -165,12 +138,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                         XXXXXXX, C(KC_PGUP), C(KC_PGDN),             KC_EQL,  KC_LBRC,    KC_DEL
   ),
 
-/**
- * \brief Media layer.
- *
- * Tertiary left- and right-hand layer is media and RGB control.  This layer is
- * symmetrical to accomodate the left- and right-hand trackball.
- */
+
   [LAYER_MEDIA] = LAYOUT_split_3x5_3(
     QK_BOOT,      XXXXXXX,    XXXXXXX,    S(C(G(KC_B))), G(S(KC_RGHT)),               XXXXXXX, RGB_RMOD,   RGB_TOG,    RGB_MOD,     QK_BOOT,
     XXXXXXX,      KC_MS_BTN2, KC_MS_UP,   KC_MS_BTN1,    DRGSCRL,                     XXXXXXX, KC_MS_BTN1, KC_MS_UP,   KC_MS_BTN2,  KC_MNXT,
@@ -178,35 +146,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                  XXXXXXX, C(A(KC_DEL)), XXXXXXX,                      KC_MS_BTN1, KC_MS_BTN2, KC_MUTE
   ),
 
-/** \brief Mouse emulation and pointer functions. */
   [LAYER_POINTER] = LAYOUT_split_3x5_3(
-    KC_P,    KC_O,    KC_I, KC_U, KC_Y,             S_D_MOD, DPI_MOD, XXXXXXX,  EE_CLR, QK_BOOT,
-    KC_LGUI, KC_L,    KC_K, KC_J, KC_H,             XXXXXXX, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
-    _______, DRGSCRL, KC_P, KC_M, KC_N,             XXXXXXX, KC_BTN3, SNIPING, DRGSCRL, _______,
-                KC_BTN3, KC_O, KC_BTN1,            KC_BTN1, KC_BTN2, KC_BTN3
+    KC_P,    KC_O,    KC_I,    KC_U,    KC_Y,             S_D_MOD, DPI_MOD, XXXXXXX,  EE_CLR, QK_BOOT,
+    KC_LGUI, KC_L,    KC_K,    KC_J,    KC_H,             XXXXXXX, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
+    _______, DRGSCRL, KC_P,    KC_M,    KC_N,             XXXXXXX, KC_BTN3, SNIPING, DRGSCRL, _______,
+                      KC_BTN3, KC_BSPC, KC_SPC,           KC_BTN1, KC_BTN2, KC_BTN3
   ),
 
-/**
- * \brief Numeral layout.
- *
- * Primary left-hand layer (right home thumb) is numerals and symbols. Numerals
- * are in the standard numpad locations with symbols in the remaining positions.
- * `KC_DOT` is duplicated from the base layer.
- */
   [LAYER_NUMERAL] = LAYOUT_split_3x5_3(
-    KC_LBRC,    KC_7,    KC_8,    KC_9, KC_MINS,                XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-    KC_SCLN,    KC_4,    KC_5,    KC_6, KC_PPLS,                XXXXXXX, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
-     KC_DOT,    KC_1,    KC_2,    KC_3, KC_PAST,                XXXXXXX, XXXXXXX, XXXXXXX, KC_RALT, XXXXXXX,
-                           KC_DOT, KC_DOT, KC_0,                XXXXXXX, _______, XXXXXXX
+    KC_PAST,    KC_7,    KC_8,    KC_9,   KC_MINS,                XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+    KC_PSLS,    KC_4,    KC_5,    KC_6,   KC_PPLS,                XXXXXXX, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
+     KC_DOT,    KC_1,    KC_2,    KC_3,   KC_0,                   XXXXXXX, XXXXXXX, XXXXXXX, KC_RALT, XXXXXXX,
+                          KC_DOT, KC_DOT, KC_0,                   XXXXXXX, _______, XXXXXXX
   ),
 
-/**
- * \brief Symbols layer.
- *
- * Secondary left-hand layer has shifted symbols in the same locations to reduce
- * chording when using mods with shifted symbols. `KC_LPRN` is duplicated next to
- * `KC_RPRN`.
- */
+
   [LAYER_SYMBOLS] = LAYOUT_split_3x5_3(
     KC_LCBR, KC_AMPR, KC_ASTR, KC_LPRN, KC_RCBR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
     KC_COLN,  KC_DLR, KC_PERC, KC_CIRC, KC_PLUS, XXXXXXX, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
