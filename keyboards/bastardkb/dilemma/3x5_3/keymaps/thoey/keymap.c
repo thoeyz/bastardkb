@@ -143,7 +143,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     QK_BOOT,      XXXXXXX,    XXXXXXX,    S(C(G(KC_B))), G(S(KC_RGHT)),               XXXXXXX, RGB_RMOD,   RGB_TOG,    RGB_MOD,     QK_BOOT,
     XXXXXXX,      KC_MS_BTN2, KC_MS_UP,   KC_MS_BTN1,    DRGSCRL,                     XXXXXXX, KC_MS_BTN1, KC_MS_UP,   KC_MS_BTN2,  KC_MNXT,
     C(A(KC_DEL)), KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT,   DRGSCRL,                     XXXXXXX, KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT, TG(1),
-                                 XXXXXXX, C(A(KC_DEL)), XXXXXXX,                      KC_MS_BTN1, KC_MS_BTN2, KC_MUTE
+                                 XXXXXXX, C(A(KC_DEL)),  CW_TOGG,                     KC_MS_BTN1, KC_MS_BTN2, KC_MUTE
   ),
 
   [LAYER_POINTER] = LAYOUT_split_3x5_3(
