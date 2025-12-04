@@ -192,3 +192,43 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
 };
 // clang-format on
 #endif // ENCODER_MAP_ENABLE
+
+//RGB
+const rgblight_segment_t PROGMEM my_BASE_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+    {1, 18, HSV_RED},       // Light 18 LEDs, starting with LED 1
+);
+const rgblight_segment_t PROGMEM my_FUNCTION_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+    {1, 18, HSV_CYAN}
+);
+const rgblight_segment_t PROGMEM my_NAVIGATION_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+    {1, 18, HSV_PURPLE}
+);
+const rgblight_segment_t PROGMEM my_MEDIA_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+    {1, 18, HSV_GREEN}
+);
+const rgblight_segment_t PROGMEM my_POINTER_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+    {1, 18, HSV_GREEN}
+);
+const rgblight_segment_t PROGMEM my_NUMERAL_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+    {1, 18, HSV_GREEN}
+);
+const rgblight_segment_t PROGMEM my_SYMBOLS_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+    {1, 18, HSV_GREEN}
+);
+
+
+// Now define the array of layers. Later layers take precedence
+const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
+    my_BASE_layer,
+    my_FUNCTION_layer,    
+    my_NAVIGATION_layer,   
+    my_MEDIA_layer,
+    my_POINTER_layer,
+    my_NUMERAL_layer,
+    my_SYMBOLS_layer
+);
+
+void keyboard_post_init_user(void) {
+    // Enable the LED layers
+    rgblight_layers = my_rgb_layers;
+}
