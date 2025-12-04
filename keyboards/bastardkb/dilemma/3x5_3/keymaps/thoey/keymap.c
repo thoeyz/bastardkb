@@ -160,7 +160,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                           KC_DOT, KC_DOT, KC_0,                   XXXXXXX, _______, XXXXXXX
   ),
 
-
   [LAYER_SYMBOLS] = LAYOUT_split_3x5_3(
     KC_LCBR, KC_AMPR, KC_ASTR, KC_LPRN, KC_RCBR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
     KC_COLN,  KC_DLR, KC_PERC, KC_CIRC, KC_PLUS, XXXXXXX, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
@@ -194,38 +193,38 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
 #endif // ENCODER_MAP_ENABLE
 
 //RGB
-const rgblight_segment_t PROGMEM my_layer0_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-    {1, 18, HSV_RED},       // Light 18 LEDs, starting with LED 1
+const rgblight_segment_t PROGMEM base_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+    {1, 15, HSV_RED},       // Light 18 LEDs, starting with LED 1
 );
-const rgblight_segment_t PROGMEM my_FUNCTION_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-    {1, 18, HSV_CYAN}
+const rgblight_segment_t PROGMEM function_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+    {1, 15, HSV_CYAN}
 );
-const rgblight_segment_t PROGMEM my_NAVIGATION_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-    {1, 18, HSV_PURPLE}
+const rgblight_segment_t PROGMEM navigation_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+    {1, 15, HSV_PURPLE}
 );
-const rgblight_segment_t PROGMEM my_MEDIA_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-    {1, 18, HSV_GREEN}
+const rgblight_segment_t PROGMEM media_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+    {1, 15, HSV_GREEN}
 );
-const rgblight_segment_t PROGMEM my_POINTER_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-    {1, 18, HSV_GREEN}
+const rgblight_segment_t PROGMEM pointer_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+    {1, 15, HSV_GREEN}
 );
-const rgblight_segment_t PROGMEM my_NUMERAL_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-    {1, 18, HSV_GREEN}
+const rgblight_segment_t PROGMEM numeral_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+    {1, 15, HSV_GREEN}
 );
-const rgblight_segment_t PROGMEM my_SYMBOLS_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-    {1, 18, HSV_GREEN}
+const rgblight_segment_t PROGMEM symbols_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+    {1, 15, HSV_GREEN}
 );
 
 
 // Now define the array of layers. Later layers take precedence
 const rgblight_segment_t* const PROGMEM my_rgb_layers[] = RGBLIGHT_LAYERS_LIST(
-    my_BASE_layer,
-    my_FUNCTION_layer,    
-    my_NAVIGATION_layer,   
-    my_MEDIA_layer,
-    my_POINTER_layer,
-    my_NUMERAL_layer,
-    my_SYMBOLS_layer
+    base_layer,
+    function_layer,    
+    navigation_layer,   
+    media_layer,
+    pointer_layer,
+    numeral_layer,
+    symbols_layer
 );
 
 void keyboard_post_init_user(void) {
