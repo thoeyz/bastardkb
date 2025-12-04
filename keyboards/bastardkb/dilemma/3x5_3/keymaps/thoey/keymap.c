@@ -193,7 +193,7 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
 #endif // ENCODER_MAP_ENABLE
 
 //RGB
-const rgblight_segment_t PROGMEM base_layer[] = RGBLIGHT_LAYER_SEGMENTS(
+const rgblight_get_sat PROGMEM base_layer[] = RGBLIGHT_LAYERS(
     {1, 15, HSV_RED}       // Light 15 LEDs, starting with LED 1
 );
 const rgblight_segment_t PROGMEM function_layer[] = RGBLIGHT_LAYER_SEGMENTS(
