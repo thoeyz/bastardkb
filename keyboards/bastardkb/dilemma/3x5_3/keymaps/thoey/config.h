@@ -24,4 +24,3 @@
 
 #define ENCODER_RESOLUTION 4
 
-#define RGBLIGHT_LAYERS
