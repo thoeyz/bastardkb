@@ -204,7 +204,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 void rgb_matrix_update_pwm_buffers(void);
 #endif
 
-/*
+
 static bool scrolling_mode = false;
 layer_state_t layer_state_set_user(layer_state_t state) {
     switch (get_highest_layer(state)) {
@@ -221,10 +221,9 @@ layer_state_t layer_state_set_user(layer_state_t state) {
         scrolling_mode = true;
         break;
     default:
-        if (scrolling_mode) {
         scrolling_mode = false;
         break;
     }
     return state;    
-}
-*/
+};
+
