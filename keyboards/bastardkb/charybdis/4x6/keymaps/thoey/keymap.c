@@ -49,6 +49,8 @@ const uint16_t PROGMEM ralt2[] = {KC_DOT, LT(3,KC_SLSH), COMBO_END};
 const uint16_t PROGMEM f5[] = {KC_BTN1, KC_BTN2, COMBO_END};
 const uint16_t PROGMEM esc[] = {KC_V, KC_B, COMBO_END};
 const uint16_t PROGMEM layer4[] = {MO(2), LT(3,KC_A), COMBO_END};
+const uint16_t PROGMEM layer5[] = {MO(2), KC_Z, COMBO_END};
+
 
 
 combo_t key_combos[] = {
@@ -70,6 +72,7 @@ combo_t key_combos[] = {
     COMBO(f5, KC_F5),
     COMBO(esc, KC_ESC),
     COMBO(layer4, OSL(4)),
+    COMBO(layer5, OSL(5)),
 
 };
 
@@ -142,11 +145,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_POINTER] = LAYOUT(
   
        KC_BTN1,                     KC_BTN2,                     XXXXXXX, XXXXXXX, S(C(G(KC_B))), G(S(KC_RGHT)),            QK_BOOT, XXXXXXX,    KC_TRNS,    XXXXXXX, _______, _______,
-       POINTER_DEFAULT_DPI_REVERSE, POINTER_DEFAULT_DPI_FORWARD, XXXXXXX, XXXXXXX, XXXXXXX,       C(A(KC_DEL)),             XXXXXXX, XXXXXXX,    C(KC_T),    C(KC_W), KC_BTN3, XXXXXXX,
-       XXXXXXX,                     XXXXXXX,                     DRGSCRL, SNIPING, KC_BTN1,       KC_LGUI,                  A(KC_1), C(KC_PGUP), C(KC_PGDN), KC_BTN2, KC_RGUI, KC_TRNS,
-       DRGSCRL,                     XXXXXXX,                     DRGSCRL, SNIPING, XXXXXXX,       XXXXXXX,                  A(KC_2), KC_BTN1,    DRGSCRL,    KC_BTN2, KC_RCTL, DRGSCRL,
+       POINTER_DEFAULT_DPI_REVERSE, POINTER_DEFAULT_DPI_FORWARD, XXXXXXX, XXXXXXX, XXXXXXX,       C(A(KC_DEL)),             XXXXXXX, XXXXXXX,    XXXXXXX,    XXXXXXX, KC_BTN3, XXXXXXX,
+       XXXXXXX,                     XXXXXXX,                     DRGSCRL, SNIPING, KC_BTN1,       KC_LGUI,                  A(KC_1), C(KC_T),    XXXXXXX,    C(KC_W), KC_RGUI, KC_TRNS,
+       DRGSCRL,                     XXXXXXX,                     DRGSCRL, SNIPING, XXXXXXX,       XXXXXXX,                  A(KC_2), KC_WFWD,    DRGSCRL,    KC_WBAK, KC_RCTL, DRGSCRL,
   
-                                                                                  KC_BTN2, KC_BTN1, KC_BTN3,                KC_WFWD, KC_WBAK,
+                                                                                  KC_BTN2, KC_BTN1, KC_BTN3,                KC_BTN1, KC_BTN2,
                                                                                      C(KC_PGUP), C(KC_PGDN),                KC_HOME
      
   ),
@@ -161,6 +164,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                   KC_BTN2, KC_BTN1,       KC_BTN3,            KC_BTN3, KC_BTN1,
                                            XXXXXXX,       KC_BTN2,            KC_BTN2
   ),
+
+ [LAYER_RNUM] = LAYOUT(
+
+       XXXXXXX, XXXXXXX, XXXXXXX, KC_LGUI, XXXXXXX, QK_BOOT,            QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+       XXXXXXX, KC_PAST, KC_7,    KC_8,    KC_9,    KC_MINS,            S_D_MOD, DPI_MOD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+       XXXXXXX, KC_PSLS, KC_4,    KC_5,    KC_6,    KC_PPLS,            XXXXXXX, KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI, XXXXXXX,
+       XXXXXXX, KC_DOT,  KC_1,    KC_2,    KC_3,    KC_0,               XXXXXXX, XXXXXXX, SNIPING, DRGSCRL, _______, XXXXXXX,
+
+                                  KC_BTN2, KC_BTN1, KC_BTN3,            KC_BTN3, KC_BTN1,
+                                           XXXXXXX, KC_BTN2,            KC_BTN2
+  ),
+
 };
 // clang-format on
 
