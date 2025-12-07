@@ -218,7 +218,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
         charybdis_set_pointer_dragscroll_enabled(true);
         break;
     case LAYER_ONEHANDED:
-        charybdis_set_pointer_dragscroll_enabled(false);
+        scrolling_mode = false;
         break;
     default:
         charybdis_set_pointer_dragscroll_enabled(false);
