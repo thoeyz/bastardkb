@@ -28,6 +28,7 @@ enum charybdis_keymap_layers {
     LAYER_RAISE,
     LAYER_POINTER,
     LAYER_ONEHANDED,
+    LAYER_RNUM,
 };
 
 //combos
