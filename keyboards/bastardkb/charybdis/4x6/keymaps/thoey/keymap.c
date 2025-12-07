@@ -32,7 +32,7 @@ enum charybdis_keymap_layers {
 };
 
 //combos
-const uint16_t PROGMEM y[] = {RSFT_T(KC_J), LT(3,KC_K), COMBO_END};
+const uint16_t PROGMEM y[] = {RSFT_T(KC_J), KC_H, COMBO_END};
 const uint16_t PROGMEM pageup[] = {KC_W, KC_E, COMBO_END};
 const uint16_t PROGMEM pagedn[] = {KC_X, KC_C, COMBO_END};
 const uint16_t PROGMEM alt[] = {KC_S, KC_D, COMBO_END};
@@ -51,6 +51,7 @@ const uint16_t PROGMEM f5[] = {KC_BTN1, KC_BTN2, COMBO_END};
 const uint16_t PROGMEM esc[] = {KC_V, KC_B, COMBO_END};
 const uint16_t PROGMEM layer4[] = {MO(2), LT(3,KC_A), COMBO_END};
 const uint16_t PROGMEM layer5[] = {MO(2), KC_Z, COMBO_END};
+const uint16_t PROGMEM Rlclick[] = {RSFT_T(KC_J), LT(3,KC_K), COMBO_END};
 
 
 
@@ -74,6 +75,7 @@ combo_t key_combos[] = {
     COMBO(esc, KC_ESC),
     COMBO(layer4, OSL(4)),
     COMBO(layer5, OSL(5)),
+    COMBO(Rlclick, KC_BTN1),
 
 };
 
