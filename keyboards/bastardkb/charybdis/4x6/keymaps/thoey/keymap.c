@@ -221,7 +221,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
         scrolling_mode = true;
         break;
     default:
-        charybdis_set_pointer_dragscroll_enabled = false;
+        charybdis_set_pointer_dragscroll_enabled(false);
         break;
     }
     return state;    
