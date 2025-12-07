@@ -204,27 +204,3 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 void rgb_matrix_update_pwm_buffers(void);
 #endif
 
-
-// Define a variable to track scroll mode state
-bool is_scroll_mode_active = false;
-
-// A function to set the scroll mode (implementation depends on specific trackball code)
-void set_trackball_scroll_mode(bool enable) {
-    is_scroll_mode_active = enable;
-    // The actual code to change trackball mode goes here.
-    // This part is highly dependent on your specific trackball's driver/code.
-    // For Ploopy, this might involve calling a specific function like
-    // ploopy_mouse_set_drag_scroll(enable); or similar.
-}
-
-// Use the layer_state_set_user function
-uint32_t layer_state_set_user(uint32_t state) {
-    if (layer_state_is(state, 3)) {
-        // Enable scroll mode when the specific layer is active
-        set_trackball_scroll_mode(true);
-    } else {
-        // Disable scroll mode when any other layer is active
-        set_trackball_scroll_mode(false);
-    }
-    return state;
-}
