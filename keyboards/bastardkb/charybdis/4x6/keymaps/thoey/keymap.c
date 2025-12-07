@@ -31,7 +31,7 @@ enum charybdis_keymap_layers {
 };
 
 //combos
-const uint16_t PROGMEM y[] = {RSFT_T(KC_J), KC_K, COMBO_END};
+const uint16_t PROGMEM y[] = {RSFT_T(KC_J), LT(3,KC_K), COMBO_END};
 const uint16_t PROGMEM pageup[] = {KC_W, KC_E, COMBO_END};
 const uint16_t PROGMEM pagedn[] = {KC_X, KC_C, COMBO_END};
 const uint16_t PROGMEM alt[] = {KC_S, KC_D, COMBO_END};
@@ -40,7 +40,7 @@ const uint16_t PROGMEM alt2[] = {KC_X, KC_V, COMBO_END};
 const uint16_t PROGMEM ltabcycfwd[] = {KC_V, KC_C, COMBO_END};
 const uint16_t PROGMEM ltabcycbk[] = {KC_Z, KC_X, COMBO_END};
 const uint16_t PROGMEM f2[] = {KC_R, KC_E, COMBO_END};
-const uint16_t PROGMEM rpgup[] = {KC_L, KC_K, COMBO_END};
+const uint16_t PROGMEM rpgup[] = {KC_L, LT(3,KC_K), COMBO_END};
 const uint16_t PROGMEM rpgdn[] = {KC_COMM, KC_DOT, COMBO_END};
 const uint16_t PROGMEM rtabcycfwd[] = {KC_M, KC_COMM, COMBO_END};
 const uint16_t PROGMEM rtabcycbk[] = {KC_N, KC_M, COMBO_END};
@@ -144,7 +144,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_BTN1,                     KC_BTN2,                     XXXXXXX, XXXXXXX, S(C(G(KC_B))), G(S(KC_RGHT)),            QK_BOOT, XXXXXXX,    KC_TRNS,    XXXXXXX, _______, _______,
        POINTER_DEFAULT_DPI_REVERSE, POINTER_DEFAULT_DPI_FORWARD, XXXXXXX, XXXXXXX, XXXXXXX,       C(A(KC_DEL)),             XXXXXXX, XXXXXXX,    C(KC_T),    C(KC_W), KC_BTN3, XXXXXXX,
        XXXXXXX,                     XXXXXXX,                     DRGSCRL, SNIPING, KC_BTN1,       KC_LGUI,                  A(KC_1), C(KC_PGUP), C(KC_PGDN), KC_BTN2, KC_RGUI, KC_TRNS,
-       DRGSCRL,                     _______,                     DRGSCRL, SNIPING, XXXXXXX,       XXXXXXX,                  A(KC_2), KC_BTN1,    DRGSCRL,    KC_BTN2, KC_RCTL, DRGSCRL,
+       DRGSCRL,                     XXXXXXX,                     DRGSCRL, SNIPING, XXXXXXX,       XXXXXXX,                  A(KC_2), KC_BTN1,    DRGSCRL,    KC_BTN2, KC_RCTL, DRGSCRL,
   
                                                                                   KC_BTN2, KC_BTN1, KC_BTN3,                KC_WFWD, KC_WBAK,
                                                                                      C(KC_PGUP), C(KC_PGDN),                KC_HOME
@@ -153,13 +153,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
  [LAYER_ONEHANDED] = LAYOUT(
 
-       XXXXXXX, XXXXXXX, XXXXXXX, KC_LGUI, XXXXXXX, QK_BOOT,            QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-       XXXXXXX, KC_P,    KC_O,    KC_I,    KC_U,    KC_Y,               S_D_MOD, DPI_MOD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-       XXXXXXX, XXXXXXX, KC_L,    KC_K,    KC_J,    KC_H,               XXXXXXX, KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI, XXXXXXX,
-       XXXXXXX, XXXXXXX, XXXXXXX, KC_P,    KC_M,    KC_N,               XXXXXXX, XXXXXXX, SNIPING, DRGSCRL, _______, XXXXXXX,
+       XXXXXXX, XXXXXXX, XXXXXXX, KC_LGUI, XXXXXXX,       QK_BOOT,            QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+       XXXXXXX, KC_P,    KC_O,    KC_I,    KC_U,          KC_Y,               S_D_MOD, DPI_MOD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+       XXXXXXX, XXXXXXX, KC_L,    KC_K,    LSFT_T(KC_J),  KC_H,               XXXXXXX, KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI, XXXXXXX,
+       XXXXXXX, XXXXXXX, XXXXXXX, KC_P,    KC_M,          KC_N,               XXXXXXX, XXXXXXX, SNIPING, DRGSCRL, _______, XXXXXXX,
 
-                                  KC_BTN2, KC_BTN1, KC_BTN3,            KC_BTN3, KC_BTN1,
-                                           XXXXXXX, KC_BTN2,            KC_BTN2
+                                  KC_BTN2, KC_BTN1,       KC_BTN3,            KC_BTN3, KC_BTN1,
+                                           XXXXXXX,       KC_BTN2,            KC_BTN2
   ),
 };
 // clang-format on
@@ -205,7 +205,7 @@ void rgb_matrix_update_pwm_buffers(void);
 #endif
 
 
-static bool scrolling_mode = false;
+static bool charybdis_set_pointer_dragscroll_enabled(false);
 layer_state_t layer_state_set_user(layer_state_t state) {
     switch (get_highest_layer(state)) {
     case LAYER_LOWER:
@@ -218,7 +218,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
         charybdis_set_pointer_dragscroll_enabled(true);
         break;
     case LAYER_ONEHANDED:
-        scrolling_mode = false;
+        charybdis_set_pointer_dragscroll_enabled(false);
         break;
     default:
         charybdis_set_pointer_dragscroll_enabled(false);
