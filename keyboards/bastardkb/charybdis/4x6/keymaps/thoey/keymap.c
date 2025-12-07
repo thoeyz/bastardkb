@@ -32,7 +32,7 @@ enum charybdis_keymap_layers {
 };
 
 //combos
-const uint16_t PROGMEM y[] = {RSFT_T(KC_J), KC_H, COMBO_END};
+const uint16_t PROGMEM y[] = {RSFT_T(KC_J), LT(3,KC_K), COMBO_END};
 const uint16_t PROGMEM pageup[] = {KC_W, KC_E, COMBO_END};
 const uint16_t PROGMEM pagedn[] = {KC_X, KC_C, COMBO_END};
 const uint16_t PROGMEM alt[] = {KC_S, KC_D, COMBO_END};
@@ -51,7 +51,7 @@ const uint16_t PROGMEM f5[] = {KC_BTN1, KC_BTN2, COMBO_END};
 const uint16_t PROGMEM esc[] = {KC_V, KC_B, COMBO_END};
 const uint16_t PROGMEM layer4[] = {MO(2), LT(3,KC_A), COMBO_END};
 const uint16_t PROGMEM layer5[] = {MO(2), KC_Z, COMBO_END};
-const uint16_t PROGMEM Rlclick[] = {RSFT_T(KC_J), LT(3,KC_K), COMBO_END};
+const uint16_t PROGMEM Rlclick[] = {KC_M, KC_COMM, COMBO_END};
 
 
 
@@ -152,7 +152,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        XXXXXXX,                     XXXXXXX,                     DRGSCRL, SNIPING, KC_BTN1,       KC_LGUI,                  A(KC_1), KC_BTN1,    XXXXXXX,    KC_BTN2, KC_RCTL, KC_RGUI,
        DRGSCRL,                     XXXXXXX,                     DRGSCRL, SNIPING, XXXXXXX,       XXXXXXX,                  A(KC_2), KC_WFWD,    DRGSCRL,    KC_WBAK, KC_RGUI, DRGSCRL,
   
-                                                                                  KC_BTN2, KC_BTN1, KC_BTN3,                KC_BTN2, KC_BTN1,
+                                                                                  KC_BTN2, KC_BTN1, KC_BTN3,                C(KC_PGUP), C(KC_PGDN),
                                                                                      C(KC_PGUP), C(KC_PGDN),                KC_HOME
      
   ),
