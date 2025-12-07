@@ -204,3 +204,23 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 void rgb_matrix_update_pwm_buffers(void);
 #endif
 
+
+layer_state_t layer_state_set_user(layer_state_t state) {
+    switch (get_highest_layer(state)) {
+    case LAYER_LOWER:
+        charybdis_set_scroll_mode(false);
+        break;
+    case LAYER_RAISE:
+        charybdis_set_scroll_mode(true);
+        break;
+    case LAYER_POINTER:
+        charybdis_set_scroll_mode(true);
+        break;
+    case LAYER_ONEHANDED:
+        charybdis_set_scroll_mode(true);
+        break;
+    default:
+        charybdis_set_scroll_mode(false);
+        break;
+    }
+};
