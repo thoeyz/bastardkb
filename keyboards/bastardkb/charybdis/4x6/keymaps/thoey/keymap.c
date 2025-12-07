@@ -107,10 +107,10 @@ static uint16_t auto_pointer_layer_timer = 0;
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_BASE] = LAYOUT(
 
-        KC_MS_BTN1, KC_MS_BTN2, KC_F2, KC_ENT, KC_LPRN,      KC_RPRN,               CW_TOGG,  KC_7,          KC_ENT,   RGB_TOG, TG(3),         TG(1),
-        CW_TOGG,    KC_U,       KC_W,  KC_E,   KC_R,         KC_T,                  KC_Y,     KC_U,          KC_I,     KC_O,    KC_Y,          KC_BSLS,
-        KC_Q,       LT(3,KC_A), KC_S,  KC_D,   LSFT_T(KC_F), KC_G,                  KC_H,     RSFT_T(KC_J),  KC_K,     KC_L,    LT(1,KC_SCLN), LCTL_T(KC_P),
-        DRGSCRL,    KC_Z,       KC_X,  KC_C,   KC_V,         KC_B,                  KC_N,     KC_M,          KC_COMM,  KC_DOT,  LT(3,KC_SLSH), DRGSCRL,
+        KC_MS_BTN1, KC_MS_BTN2, KC_F2, KC_ENT, KC_LPRN,      KC_RPRN,               CW_TOGG,  KC_7,          KC_ENT,     RGB_TOG, TG(3),         TG(1),
+        CW_TOGG,    KC_U,       KC_W,  KC_E,   KC_R,         KC_T,                  KC_Y,     KC_U,          KC_I,       KC_O,    KC_Y,          KC_BSLS,
+        KC_Q,       LT(3,KC_A), KC_S,  KC_D,   LSFT_T(KC_F), KC_G,                  KC_H,     RSFT_T(KC_J),  LT(3,KC_K), KC_L,    LT(1,KC_SCLN), LCTL_T(KC_P),
+        DRGSCRL,    KC_Z,       KC_X,  KC_C,   KC_V,         KC_B,                  KC_N,     KC_M,          KC_COMM,    KC_DOT,  LT(3,KC_SLSH), DRGSCRL,
   
                              LT(1,KC_TAB), LCTL_T(KC_BSPC), MO(2),                 LT(3,KC_HOME), LT(1,KC_SPC),
                                                 KC_BTN1, KC_BTN2,                  A(KC_LSFT)
@@ -209,16 +209,16 @@ static bool scrolling_mode = false;
 layer_state_t layer_state_set_user(layer_state_t state) {
     switch (get_highest_layer(state)) {
     case LAYER_LOWER:
-        scrolling_mode = false;
+        charybdis_set_pointer_dragscroll_enabled(false);
         break;
     case LAYER_RAISE:
-        charybdis_set_pointer_dragscroll_enabled(!charybdis_get_pointer_dragscroll_enabled());
+        charybdis_set_pointer_dragscroll_enabled(false);
         break;
     case LAYER_POINTER:
-        scrolling_mode = true;
+        charybdis_set_pointer_dragscroll_enabled(true);
         break;
     case LAYER_ONEHANDED:
-        scrolling_mode = true;
+        charybdis_set_pointer_dragscroll_enabled(false);
         break;
     default:
         charybdis_set_pointer_dragscroll_enabled(false);
