@@ -212,7 +212,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
         scrolling_mode = false;
         break;
     case LAYER_RAISE:
-        DRGSCRL(true);
+        charybdis_set_pointer_dragscroll_enabled(!charybdis_get_pointer_dragscroll_enabled());
         break;
     case LAYER_POINTER:
         scrolling_mode = true;
