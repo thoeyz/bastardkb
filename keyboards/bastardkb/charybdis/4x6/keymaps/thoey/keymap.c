@@ -205,7 +205,7 @@ void rgb_matrix_update_pwm_buffers(void);
 #endif
 
 
-static bool charybdis_set_pointer_dragscroll_enabled(false);
+//static bool charybdis_set_pointer_dragscroll_enabled(false);
 layer_state_t layer_state_set_user(layer_state_t state) {
     switch (get_highest_layer(state)) {
     case LAYER_LOWER:
