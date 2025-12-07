@@ -69,7 +69,7 @@ combo_t key_combos[] = {
     COMBO(ralt2, A(KC_2)),
     COMBO(f5, KC_F5),
     COMBO(esc, KC_ESC),
-    COMBO(layer4, MO(4)),
+    COMBO(layer4, OSL(4)),
 
 };
 
