@@ -212,7 +212,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
         scrolling_mode = false;
         break;
     case LAYER_RAISE:
-        scrolling_mode = true;
+        set_scrolling_mode = true;
         break;
     case LAYER_POINTER:
         scrolling_mode = true;
