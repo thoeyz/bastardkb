@@ -43,8 +43,6 @@ const uint16_t PROGMEM ltabcycbk[] = {KC_Z, KC_X, COMBO_END};
 const uint16_t PROGMEM f2[] = {KC_R, KC_E, COMBO_END};
 const uint16_t PROGMEM rpgup[] = {KC_L, LT(3,KC_K), COMBO_END};
 const uint16_t PROGMEM rpgdn[] = {KC_COMM, KC_DOT, COMBO_END};
-const uint16_t PROGMEM rtabcycfwd[] = {KC_M, KC_COMM, COMBO_END};
-const uint16_t PROGMEM rtabcycbk[] = {KC_N, KC_M, COMBO_END};
 const uint16_t PROGMEM ralt1[] = {KC_L, LT(1,KC_SCLN), COMBO_END};
 const uint16_t PROGMEM ralt2[] = {KC_DOT, LT(3,KC_SLSH), COMBO_END};
 const uint16_t PROGMEM f5[] = {KC_BTN1, KC_BTN2, COMBO_END};
@@ -67,8 +65,6 @@ combo_t key_combos[] = {
     COMBO(f2, KC_F2),
     COMBO(rpgup, KC_PGUP),
     COMBO(rpgdn, KC_PGDN),
-    COMBO(rtabcycfwd, C(KC_PGDN)),
-    COMBO(rtabcycbk, C(KC_PGUP)),
     COMBO(ralt1, A(KC_1)),
     COMBO(ralt2, A(KC_2)),
     COMBO(f5, KC_F5),
