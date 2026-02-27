@@ -133,8 +133,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
        KC_F12,   KC_F1,    KC_F2,      KC_F3,   KC_F4,      KC_F5,            KC_F6,   KC_F7,   KC_F8,   KC_F9,    KC_F10,  KC_F11,
        KC_MNXT,  XXXXXXX,  XXXXXXX,    KC_4,    KC_5,       KC_6,             KC_7,    KC_8,    KC_9,    KC_0,     KC_MINS, KC_VOLU,
-       KC_MPLY,  KC_RBRC,  KC_LEFT,    KC_UP,   KC_RGHT,    KC_HOME,          XXXXXXX, KC_RSFT, KC_RCTL, KC_RALT,  KC_QUOT, XXXXXXX,
-       XXXXXXX,  KC_LCTL,  A(KC_LEFT), KC_DOWN, A(KC_RGHT), KC_END,           RGB_MOD, RGB_RMOD, UG_HUEU, UG_HUED, QK_UNDERGLOW_VALUE_UP, QK_UNDERGLOW_VALUE_DOWN,
+       KC_MPLY,  KC_RBRC,  MS_LEFT,    MS_UP,   MS_RGHT,    KC_HOME,          XXXXXXX, KC_RSFT, KC_RCTL, KC_RALT,  KC_QUOT, XXXXXXX,
+       XXXXXXX,  KC_LCTL,  A(KC_LEFT), MS_DOWN, A(KC_RGHT), KC_END,           RGB_MOD, RGB_RMOD, UG_HUEU, UG_HUED, QK_UNDERGLOW_VALUE_UP, QK_UNDERGLOW_VALUE_DOWN,
 
                                   _______, _______, XXXXXXX,                  KC_EQL, KC_LBRC,
                                            _______, _______,                  XXXXXXX
@@ -160,7 +160,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        XXXXXXX, XXXXXXX, KC_L,    KC_K,    LSFT_T(KC_J),  KC_H,               XXXXXXX, KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI, XXXXXXX,
        XXXXXXX, XXXXXXX, XXXXXXX, KC_P,    KC_M,          KC_N,               XXXXXXX, XXXXXXX, SNIPING, DRGSCRL, _______, XXXXXXX,
 
-                                  KC_BTN2, KC_BTN1,       KC_BTN3,            KC_BTN3, KC_BTN1,
+                                  KC_BSPC, KC_SPC,        KC_BTN3,            KC_BTN3, KC_BTN1,
                                            XXXXXXX,       KC_BTN2,            KC_BTN2
   ),
 
@@ -171,7 +171,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        XXXXXXX, KC_PSLS, KC_4,    KC_5,    KC_6,    KC_PPLS,            XXXXXXX, KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI, XXXXXXX,
        XXXXXXX, KC_DOT,  KC_1,    KC_2,    KC_3,    KC_0,               XXXXXXX, XXXXXXX, SNIPING, DRGSCRL, _______, XXXXXXX,
 
-                                  KC_BTN2, KC_BTN1, KC_BTN3,            KC_BTN3, KC_BTN1,
+                                  KC_BSPC, KC_SPC,  KC_BTN3,            KC_BTN3, KC_BTN1,
                                            XXXXXXX, KC_BTN2,            KC_BTN2
   ),
 
