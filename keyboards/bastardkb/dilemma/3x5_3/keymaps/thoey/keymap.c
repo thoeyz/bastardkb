@@ -33,6 +33,7 @@ const uint16_t PROGMEM pageup[] = {KC_W, KC_E, COMBO_END};
 const uint16_t PROGMEM pagedn[] = {KC_X, KC_C, COMBO_END};
 const uint16_t PROGMEM alt[] = {KC_S, KC_D, COMBO_END};
 const uint16_t PROGMEM ctl[] = {LSFT_T(KC_F), KC_D, COMBO_END};
+const uint16_t PROGMEM esc[] = {KC_V, KC_B, COMBO_END};
 const uint16_t PROGMEM alt1[] = {KC_W, KC_R, COMBO_END};
 const uint16_t PROGMEM alt2[] = {KC_X, KC_V, COMBO_END};
 const uint16_t PROGMEM lent[] = {LT(2,KC_A), KC_W, COMBO_END};
@@ -51,14 +52,15 @@ const uint16_t PROGMEM ralt2[] = {KC_DOT, KC_M, COMBO_END};
 const uint16_t PROGMEM layer5[] = {LT(3,KC_Z), LT(2,KC_BSPC), COMBO_END};
 const uint16_t PROGMEM layer4[] = {LT(2,KC_A), LT(2,KC_BSPC), COMBO_END};
 const uint16_t PROGMEM divide[] = {KC_5, KC_6, COMBO_END};
-const uint16_t PROGMEM gamei[] = {KC_F, KC_Z, COMBO_END};
+const uint16_t PROGMEM thai[] = {KC_G, LT(2,KC_BSPC), COMBO_END};
+const uint16_t PROGMEM gamei[] = {KC_G, KC_LALT, COMBO_END};
 const uint16_t PROGMEM gamef2[] = {KC_C, KC_R, COMBO_END};
 const uint16_t PROGMEM gamectl[] = {KC_X, KC_SPC, COMBO_END};
 const uint16_t PROGMEM gameq[] = {KC_X, KC_3, COMBO_END};
 const uint16_t PROGMEM gameo[] = {KC_ESC, KC_LSFT, COMBO_END};
 const uint16_t PROGMEM gameleft[] = {KC_B, KC_3, COMBO_END};
 const uint16_t PROGMEM gameright[] = {KC_B, KC_F, COMBO_END};
-const uint16_t PROGMEM gameesc[] = {KC_V, KC_B, COMBO_END};
+
 const uint16_t PROGMEM gamefive[] = {KC_SPC, KC_Z, COMBO_END};
 
 
@@ -67,6 +69,7 @@ combo_t key_combos[] = {
     COMBO(pagedn, KC_PGDN), 
     COMBO(alt, OSM(MOD_LALT)),
     COMBO(ctl, OSM(MOD_LCTL)),
+    COMBO(esc, KC_ESC),
     COMBO(alt1, A(KC_1)),
     COMBO(alt2, A(KC_2)),
     COMBO(lent, KC_ENT),
@@ -85,6 +88,7 @@ combo_t key_combos[] = {
     COMBO(layer5, OSL(5)),
     COMBO(layer4, OSL(4)),
     COMBO(divide, KC_PSLS),
+    COMBO(thai, A(KC_LSFT)),
     COMBO(gamei, KC_I),
     COMBO(gamef2, KC_F2),
     COMBO(gamectl, KC_LCTL),
@@ -92,7 +96,6 @@ combo_t key_combos[] = {
     COMBO(gameo, KC_O),
     COMBO(gameleft, KC_LEFT),
     COMBO(gameright, KC_RGHT),
-    COMBO(gameesc, KC_ESC),
     COMBO(gamefive, KC_5),
 
 };
@@ -134,7 +137,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_NAVIGATION] = LAYOUT_split_3x5_3(
     A(KC_LSFT), CW_TOGG,    KC_4,    KC_5,       KC_6,               KC_7,    KC_8,       KC_9,    KC_0,       KC_MINS,
     KC_RBRC,    KC_LEFT,    KC_UP,   KC_RGHT,    KC_HOME,            XXXXXXX, KC_MS_BTN1, KC_DOWN, KC_MS_BTN2, KC_QUOT,
-    KC_ESC,     A(KC_LEFT), KC_DOWN, A(KC_RGHT), KC_END,             XXXXXXX, KC_HOME,    KC_PGDN, KC_PGUP,    KC_END,
+    KC_ENT,     A(KC_LEFT), KC_DOWN, A(KC_RGHT), KC_END,             XXXXXXX, KC_HOME,    KC_PGDN, KC_PGUP,    KC_END,
                         XXXXXXX, C(KC_PGUP), C(KC_PGDN),             KC_EQL,  KC_LBRC,    KC_DEL
   ),
 
