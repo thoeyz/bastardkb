@@ -31,7 +31,7 @@ enum dilemma_keymap_layers {
 //combos
 const uint16_t PROGMEM pageup[] = {KC_W, KC_E, COMBO_END};
 const uint16_t PROGMEM pagedn[] = {KC_X, KC_C, COMBO_END};
-const uint16_t PROGMEM alt[] = {LSFT_T(KC_F), KC_D, COMBO_END};
+const uint16_t PROGMEM alt[] = {LT(2,KC_A), KC_S, COMBO_END};
 //const uint16_t PROGMEM ctl[] = {LSFT_T(KC_F), KC_D, COMBO_END};
 const uint16_t PROGMEM esc[] = {KC_V, KC_B, COMBO_END};
 const uint16_t PROGMEM alt1[] = {KC_W, KC_R, COMBO_END};
