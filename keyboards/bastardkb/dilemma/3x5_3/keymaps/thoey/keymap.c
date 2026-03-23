@@ -31,7 +31,7 @@ enum dilemma_keymap_layers {
 //combos
 const uint16_t PROGMEM pageup[] = {KC_W, KC_E, COMBO_END};
 const uint16_t PROGMEM pagedn[] = {KC_X, KC_C, COMBO_END};
-const uint16_t PROGMEM alt[] = {KC_S, KC_D, COMBO_END};
+const uint16_t PROGMEM alt[] = {LSFT_T(KC_F), KC_D, COMBO_END};
 const uint16_t PROGMEM ctl[] = {LSFT_T(KC_F), KC_D, COMBO_END};
 const uint16_t PROGMEM esc[] = {KC_V, KC_B, COMBO_END};
 const uint16_t PROGMEM alt1[] = {KC_W, KC_R, COMBO_END};
@@ -40,7 +40,7 @@ const uint16_t PROGMEM lent[] = {LT(2,KC_A), KC_W, COMBO_END};
 const uint16_t PROGMEM f2[] = {KC_R, KC_E, COMBO_END};
 const uint16_t PROGMEM rctl[] = {KC_K, KC_L, COMBO_END};
 const uint16_t PROGMEM Llclick[] = {LSFT_T(KC_F), KC_G, COMBO_END};
-const uint16_t PROGMEM Lrclick[] = {LT(2,KC_BSPC), KC_G, COMBO_END};
+const uint16_t PROGMEM Lrclick[] = {LCTL_T(KC_TAB), KC_G, COMBO_END};
 const uint16_t PROGMEM Rlclick[] = {KC_H, RSFT_T(KC_J), COMBO_END};
 const uint16_t PROGMEM Rrclick[] = {KC_H, KC_SPC, COMBO_END};
 const uint16_t PROGMEM rpgup[] = {KC_O, KC_I, COMBO_END};
