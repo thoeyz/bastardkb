@@ -53,6 +53,8 @@ const uint16_t PROGMEM layer5[] = {LT(3,KC_Z), LT(2,KC_BSPC), COMBO_END};
 const uint16_t PROGMEM layer4[] = {LT(2,KC_A), LT(2,KC_BSPC), COMBO_END};
 const uint16_t PROGMEM divide[] = {KC_5, KC_6, COMBO_END};
 const uint16_t PROGMEM thai[] = {KC_G, LT(2,KC_BSPC), COMBO_END};
+const uint16_t PROGMEM gametog[] = {KC_Q, KC_W, KC_E, KC_R, COMBO_END};
+const uint16_t PROGMEM gametogbk[] = {KC_ESC, KC_LSFT, KC_W, KC_C, COMBO_END};
 const uint16_t PROGMEM gamei[] = {KC_G, KC_LALT, COMBO_END};
 const uint16_t PROGMEM gamef2[] = {KC_C, KC_R, COMBO_END};
 const uint16_t PROGMEM gamectl[] = {KC_X, KC_SPC, COMBO_END};
@@ -89,6 +91,8 @@ combo_t key_combos[] = {
     COMBO(layer4, OSL(4)),
     COMBO(divide, KC_PSLS),
     COMBO(thai, A(KC_LSFT)),
+    COMBO(gametog, TG(1)),
+    COMBO(gametogbk, TG(1)),
     COMBO(gamei, KC_I),
     COMBO(gamef2, KC_F2),
     COMBO(gamectl, KC_LCTL),
