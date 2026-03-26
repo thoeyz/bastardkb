@@ -63,6 +63,7 @@ const uint16_t PROGMEM gameo[] = {KC_ESC, KC_LSFT, COMBO_END};
 const uint16_t PROGMEM gameleft[] = {KC_B, KC_3, COMBO_END};
 const uint16_t PROGMEM gameright[] = {KC_B, KC_F, COMBO_END};
 const uint16_t PROGMEM gamey[] = {KC_E, KC_X, COMBO_END};
+const uint16_t PROGMEM gametab[] = {KC_R, KC_ESC, COMBO_END};
 const uint16_t PROGMEM gamefive[] = {KC_SPC, KC_Z, COMBO_END};
 
 
@@ -101,6 +102,7 @@ combo_t key_combos[] = {
     COMBO(gameleft, KC_LEFT),
     COMBO(gameright, KC_RGHT),
     COMBO(gamey, KC_Y),
+    COMBO(gametab, KC_TAB),
     COMBO(gamefive, KC_5),
 
 };
@@ -157,7 +159,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_POINTER] = LAYOUT_split_3x5_3(
     KC_P,    KC_O,    KC_I,    KC_U,         KC_Y,             S_D_MOD, DPI_MOD, XXXXXXX,  EE_CLR, QK_BOOT,
     KC_LGUI, KC_L,    KC_K,    RSFT_T(KC_J), KC_H,             XXXXXXX, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
-    _______, DRGSCRL, KC_P,    KC_M,         KC_N,             XXXXXXX, KC_BTN3, SNIPING, DRGSCRL, _______,
+    _______, CW_TOGG, KC_P,    KC_M,         KC_N,             XXXXXXX, KC_BTN3, SNIPING, DRGSCRL, _______,
                       KC_BTN3, KC_BSPC,      KC_SPC,           KC_BTN1, KC_BTN2, KC_BTN3
   ),
 
