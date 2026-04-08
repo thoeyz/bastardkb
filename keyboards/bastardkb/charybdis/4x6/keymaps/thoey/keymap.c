@@ -43,13 +43,13 @@ const uint16_t PROGMEM ltabcycbk[] = {KC_Z, KC_X, COMBO_END};
 const uint16_t PROGMEM f2[] = {KC_R, KC_E, COMBO_END};
 const uint16_t PROGMEM rpgup[] = {KC_L, LT(3,KC_K), COMBO_END};
 const uint16_t PROGMEM rpgdn[] = {KC_COMM, KC_DOT, COMBO_END};
-const uint16_t PROGMEM ralt1[] = {KC_L, LT(1,KC_SCLN), COMBO_END};
-const uint16_t PROGMEM ralt2[] = {KC_DOT, LT(3,KC_SLSH), COMBO_END};
+//const uint16_t PROGMEM ralt1[] = {KC_L, LT(1,KC_SCLN), COMBO_END};
 const uint16_t PROGMEM f5[] = {KC_BTN1, KC_BTN2, COMBO_END};
 const uint16_t PROGMEM esc[] = {KC_V, KC_B, COMBO_END};
 const uint16_t PROGMEM layer4[] = {MO(2), LT(3,KC_A), COMBO_END};
 const uint16_t PROGMEM layer5[] = {MO(2), KC_Z, COMBO_END};
 const uint16_t PROGMEM Rlclick[] = {KC_M, KC_COMM, COMBO_END};
+const uint16_t PROGMEM Rrclick[] = {KC_DOT, LT(3,KC_SLSH), COMBO_END};
 
 
 
@@ -65,13 +65,13 @@ combo_t key_combos[] = {
     COMBO(f2, KC_F2),
     COMBO(rpgup, KC_PGUP),
     COMBO(rpgdn, KC_PGDN),
-    COMBO(ralt1, A(KC_1)),
-    COMBO(ralt2, A(KC_2)),
+    //COMBO(ralt1, A(KC_1)),
     COMBO(f5, KC_F5),
     COMBO(esc, KC_ESC),
     COMBO(layer4, OSL(4)),
     COMBO(layer5, OSL(5)),
     COMBO(Rlclick, KC_BTN1),
+    COMBO(Rrclick, KC_BTN2),
 
 };
 
