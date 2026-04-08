@@ -35,7 +35,7 @@ enum charybdis_keymap_layers {
 const uint16_t PROGMEM y[] = {RSFT_T(KC_J), LT(3,KC_K), COMBO_END};
 const uint16_t PROGMEM pageup[] = {KC_W, KC_E, COMBO_END};
 const uint16_t PROGMEM pagedn[] = {KC_X, KC_C, COMBO_END};
-const uint16_t PROGMEM alt[] = {KC_S, KC_D, COMBO_END};
+const uint16_t PROGMEM alt[] = {LT(3,KC_A),KC_S, KC_D, COMBO_END};
 const uint16_t PROGMEM alt1[] = {KC_W, KC_R, COMBO_END};
 const uint16_t PROGMEM alt2[] = {KC_X, KC_V, COMBO_END};
 const uint16_t PROGMEM ltabcycfwd[] = {KC_V, KC_C, COMBO_END};
