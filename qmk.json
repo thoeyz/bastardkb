@@ -1,8 +1,8 @@
 {
     "userspace_version": "1.0",
     "build_targets": [
-        //["bastardkb/charybdis/4x6", "thoey"],
-        ["bastardkb/dilemma/3x5_3", "thoey"],
+        ["bastardkb/charybdis/4x6", "thoey"],
+        //["bastardkb/dilemma/3x5_3", "thoey"],
        
     ]
 }
