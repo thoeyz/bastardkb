@@ -47,6 +47,7 @@ const uint16_t PROGMEM rpgdn[] = {KC_COMM, KC_DOT, COMBO_END};
 const uint16_t PROGMEM f5[] = {KC_BTN1, KC_BTN2, COMBO_END};
 const uint16_t PROGMEM esc[] = {KC_V, KC_B, COMBO_END};
 const uint16_t PROGMEM layer4[] = {MO(2), LT(3,KC_A), COMBO_END};
+const uint16_t PROGMEM Rlayer4[] = {LT(1,KC_SPC), LT(1,KC_SCLN), COMBO_END};
 const uint16_t PROGMEM layer5[] = {MO(2), KC_Z, COMBO_END};
 const uint16_t PROGMEM Rlclick[] = {KC_M, KC_COMM, COMBO_END};
 const uint16_t PROGMEM Rrclick[] = {KC_DOT, LT(3,KC_SLSH), COMBO_END};
@@ -69,6 +70,7 @@ combo_t key_combos[] = {
     COMBO(f5, KC_F5),
     COMBO(esc, KC_ESC),
     COMBO(layer4, OSL(4)),
+    COMBO(Rlayer4, OSL(4)),
     COMBO(layer5, OSL(5)),
     COMBO(Rlclick, KC_BTN1),
     COMBO(Rrclick, KC_BTN2),
@@ -155,13 +157,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
  [LAYER_ONEHANDED] = LAYOUT(
 
-       XXXXXXX, XXXXXXX, XXXXXXX, KC_LGUI, XXXXXXX,       QK_BOOT,            QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-       XXXXXXX, KC_P,    KC_O,    KC_I,    KC_U,          KC_Y,               S_D_MOD, DPI_MOD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-       XXXXXXX, XXXXXXX, KC_L,    KC_K,    LSFT_T(KC_J),  KC_H,               XXXXXXX, KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI, XXXXXXX,
-       XXXXXXX, XXXXXXX, XXXXXXX, KC_P,    KC_M,          KC_N,               XXXXXXX, XXXXXXX, SNIPING, DRGSCRL, _______, XXXXXXX,
+       XXXXXXX, XXXXXXX, XXXXXXX, KC_LGUI, XXXXXXX,       QK_BOOT,            QK_BOOT, XXXXXXX,      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+       XXXXXXX, KC_P,    KC_O,    KC_I,    KC_U,          KC_Y,               KC_T,    KC_R,         KC_E,    KC_W,    KC_T,    XXXXXXX,
+       XXXXXXX, XXXXXXX, KC_L,    KC_K,    LSFT_T(KC_J),  KC_H,               KC_G,    RSFT_T(KC_F), KC_D,    KC_S,    KC_A,    KC_Q,
+       XXXXXXX, XXXXXXX, XXXXXXX, KC_P,    KC_M,          KC_N,               KC_B,    KC_V,         KC_C,    KC_X,    KC_Z,    KC_F5,
 
-                                  KC_BSPC, KC_SPC,        KC_BTN3,            KC_BTN3, KC_BTN1,
-                                           XXXXXXX,       KC_BTN2,            KC_BTN2
+                                  KC_BSPC, KC_SPC,        KC_BTN3,            KC_BSPC, KC_SPC,
+                                           XXXXXXX,       KC_BTN2,            KC_F5
   ),
 
  [LAYER_RNUM] = LAYOUT(
