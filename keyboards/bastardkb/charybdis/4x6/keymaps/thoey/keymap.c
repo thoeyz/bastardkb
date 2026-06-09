@@ -32,12 +32,12 @@ enum charybdis_keymap_layers {
 };
 
 //combos
-const uint16_t PROGMEM y[] = {RSFT_T(KC_J), LT(3,KC_K), COMBO_END};
+const uint16_t PROGMEM u[] = {RSFT_T(KC_J), LT(3,KC_K), COMBO_END};
+const uint16_t PROGMEM y[] = {RSFT_T(KC_J), KC_H, COMBO_END};
 const uint16_t PROGMEM pageup[] = {KC_W, KC_E, COMBO_END};
 const uint16_t PROGMEM pagedn[] = {KC_X, KC_C, COMBO_END};
-const uint16_t PROGMEM alt[] = {LT(3,KC_A),KC_S, KC_D, COMBO_END};
-const uint16_t PROGMEM alt1[] = {KC_W, KC_R, COMBO_END};
-const uint16_t PROGMEM alt2[] = {KC_X, KC_V, COMBO_END};
+const uint16_t PROGMEM alt[] = {KC_Z,KC_X, KC_C, COMBO_END};
+const uint16_t PROGMEM ctrl[] = {KC_D, LSFT_T(KC_F), COMBO_END};
 const uint16_t PROGMEM ltabcycfwd[] = {KC_V, KC_C, COMBO_END};
 const uint16_t PROGMEM ltabcycbk[] = {KC_Z, KC_X, COMBO_END};
 const uint16_t PROGMEM f2[] = {KC_R, KC_E, COMBO_END};
@@ -54,12 +54,12 @@ const uint16_t PROGMEM Rrclick[] = {KC_DOT, LT(3,KC_SLSH), COMBO_END};
 
 
 combo_t key_combos[] = {
+    COMBO(u, KC_U),
     COMBO(y, KC_Y),
     COMBO(pageup, KC_PGUP),
     COMBO(pagedn, KC_PGDN), 
     COMBO(alt, OSM(MOD_LALT)),
-    COMBO(alt1, A(KC_1)),
-    COMBO(alt2, A(KC_2)),
+    COMBO(ctrl, OSM(MOD_LCTL)),
     COMBO(ltabcycfwd, C(KC_PGDN)),
     COMBO(ltabcycbk, C(KC_PGUP)),
     COMBO(f2, KC_F2),
