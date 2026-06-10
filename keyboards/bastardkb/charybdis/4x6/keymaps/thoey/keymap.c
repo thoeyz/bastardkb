@@ -33,7 +33,7 @@ enum charybdis_keymap_layers {
 
 //combos
 const uint16_t PROGMEM u[] = {RSFT_T(KC_J), LT(3,KC_K), COMBO_END};
-const uint16_t PROGMEM y[] = {RSFT_T(KC_J), KC_H, COMBO_END};
+const uint16_t PROGMEM y[] = {RSFT_T(KC_J), LT(1,KC_SPC), COMBO_END};
 const uint16_t PROGMEM pageup[] = {KC_W, KC_E, COMBO_END};
 const uint16_t PROGMEM pagedn[] = {KC_X, KC_C, COMBO_END};
 const uint16_t PROGMEM alt[] = {KC_Z,KC_X, KC_C, COMBO_END};
@@ -146,9 +146,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_POINTER] = LAYOUT(
   
        KC_BTN1,                     KC_BTN2,                     XXXXXXX, XXXXXXX, S(C(G(KC_B))), G(S(KC_RGHT)),          QK_BOOT, XXXXXXX,    KC_TRNS,    XXXXXXX, _______, _______,
-       POINTER_DEFAULT_DPI_REVERSE, POINTER_DEFAULT_DPI_FORWARD, KC_WBAK, MS_UP,   KC_WFWD,       C(A(KC_DEL)),           XXXXXXX, C(KC_T),    XXXXXXX,    C(KC_W),   KC_BTN3, XXXXXXX,
-       XXXXXXX,                     XXXXXXX,                     MS_LEFT, MS_DOWN, MS_RGHT,       MS_WHLU,                A(KC_1), KC_BTN1,    XXXXXXX,    KC_BTN2, KC_RCTL, KC_RGUI,
-       DRGSCRL,                     XXXXXXX,                     DRGSCRL, SNIPING, XXXXXXX,       MS_WHLD,                A(KC_2), KC_WFWD,    DRGSCRL,    KC_WBAK, KC_RGUI, DRGSCRL,
+       POINTER_DEFAULT_DPI_REVERSE, POINTER_DEFAULT_DPI_FORWARD, KC_WBAK, MS_UP,   KC_WFWD,       C(A(KC_DEL)),           XXXXXXX, C(KC_T),    XXXXXXX,    C(KC_W), KC_BTN3, XXXXXXX,
+       XXXXXXX,                     XXXXXXX,                     MS_LEFT, MS_DOWN, MS_RGHT,       MS_WHLU,                KC_F5,   KC_BTN1,    XXXXXXX,    KC_BTN2, KC_RCTL, KC_RGUI,
+       DRGSCRL,                     XXXXXXX,                     DRGSCRL, SNIPING, XXXXXXX,       MS_WHLD,                KC_F5,   KC_WFWD,    DRGSCRL,    KC_WBAK, KC_RGUI, DRGSCRL,
   
                                                                                  KC_BTN2, KC_BTN1, KC_BTN3,               C(KC_PGUP), C(KC_PGDN),
                                                                                     C(KC_PGUP), C(KC_PGDN),               KC_HOME
