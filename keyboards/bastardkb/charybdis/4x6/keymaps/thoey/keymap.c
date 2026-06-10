@@ -49,6 +49,7 @@ const uint16_t PROGMEM esc[] = {KC_V, KC_B, COMBO_END};
 const uint16_t PROGMEM layer4[] = {MO(2), LT(3,KC_A), COMBO_END};
 const uint16_t PROGMEM Rlayer4[] = {LT(1,KC_SPC), LT(1,KC_SCLN), COMBO_END};
 const uint16_t PROGMEM layer5[] = {MO(2), KC_Z, COMBO_END};
+const uint16_t PROGMEM Rlayer5[] = {LT(1,KC_SPC), LT(3,KC_SLSH), COMBO_END};
 const uint16_t PROGMEM Rlclick[] = {KC_M, KC_COMM, COMBO_END};
 const uint16_t PROGMEM Rrclick[] = {KC_DOT, LT(3,KC_SLSH), COMBO_END};
 
@@ -72,6 +73,7 @@ combo_t key_combos[] = {
     COMBO(layer4, OSL(4)),
     COMBO(Rlayer4, OSL(4)),
     COMBO(layer5, OSL(5)),
+    COMBO(Rlayer5, OSL(5)),
     COMBO(Rlclick, KC_BTN1),
     COMBO(Rrclick, KC_BTN2),
 
@@ -168,10 +170,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
  [LAYER_RNUM] = LAYOUT(
 
-       XXXXXXX, XXXXXXX, XXXXXXX, KC_LGUI, XXXXXXX, QK_BOOT,            QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-       XXXXXXX, KC_PAST, KC_7,    KC_8,    KC_9,    KC_MINS,            S_D_MOD, DPI_MOD, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-       XXXXXXX, KC_PSLS, KC_4,    KC_5,    KC_6,    KC_PPLS,            XXXXXXX, KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI, XXXXXXX,
-       XXXXXXX, KC_DOT,  KC_1,    KC_2,    KC_3,    KC_0,               XXXXXXX, XXXXXXX, SNIPING, DRGSCRL, _______, XXXXXXX,
+       XXXXXXX, XXXXXXX, XXXXXXX, KC_LGUI, XXXXXXX, QK_BOOT,            QK_BOOT, XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,
+       XXXXXXX, KC_PAST, KC_7,    KC_8,    KC_9,    KC_MINS,            S_D_MOD, DPI_MOD,  SNIPING,  XXXXXXX,  XXXXXXX,  XXXXXXX,
+       XXXXXXX, KC_PSLS, KC_4,    KC_5,    KC_6,    KC_PPLS,            XXXXXXX, KC_RSFT,  KC_RCTL,  KC_RALT,  KC_RGUI,  XXXXXXX,
+       XXXXXXX, KC_DOT,  KC_1,    KC_2,    KC_3,    KC_0,               XXXXXXX, RA(KC_D), RA(KC_A), RA(KC_V), RA(KC_S), XXXXXXX,
 
                                   KC_BSPC, KC_SPC,  KC_BTN3,            KC_BTN3, KC_BTN1,
                                            XXXXXXX, KC_BTN2,            KC_BTN2
