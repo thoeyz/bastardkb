@@ -32,8 +32,8 @@ enum charybdis_keymap_layers {
 };
 
 //combos
-const uint16_t PROGMEM u[] = {RSFT_T(KC_J), LT(1,KC_SPC), COMBO_END};
-const uint16_t PROGMEM y[] = {KC_H, LT(1,KC_SPC), COMBO_END};
+const uint16_t PROGMEM u2[] = {RSFT_T(KC_J), LT(1,KC_SPC), COMBO_END};
+const uint16_t PROGMEM y2[] = {KC_H, LT(1,KC_SPC), COMBO_END};
 const uint16_t PROGMEM u[] = {RSFT_T(KC_J), LT(1,KC_SCLN), COMBO_END};
 const uint16_t PROGMEM y[] = {KC_H, LT(1,KC_SCLN), COMBO_END};
 const uint16_t PROGMEM pageup[] = {KC_W, KC_E, COMBO_END};
@@ -60,6 +60,8 @@ const uint16_t PROGMEM Rrclick[] = {KC_DOT, LT(3,KC_SLSH), COMBO_END};
 combo_t key_combos[] = {
     COMBO(u, KC_U),
     COMBO(y, KC_Y),
+    COMBO(u2, KC_U),
+    COMBO(y2, KC_Y),
     COMBO(pageup, KC_PGUP),
     COMBO(pagedn, KC_PGDN), 
     COMBO(alt, OSM(MOD_LALT)),
