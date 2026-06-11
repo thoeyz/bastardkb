@@ -170,10 +170,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
  [LAYER_RNUM] = LAYOUT(
 
-       XXXXXXX, XXXXXXX, XXXXXXX, KC_LGUI, XXXXXXX, QK_BOOT,            QK_BOOT, S_D_MOD, DPI_MOD, SNIPING,       XXXXXXX, XXXXXXX,
-       XXXXXXX, KC_PAST, KC_7,    KC_8,    KC_9,    KC_MINS,            XXXXXXX, XXXXXXX, KC_UP,   OSM(MOD_RALT), XXXXXXX, XXXXXXX,
-       XXXXXXX, KC_PSLS, KC_4,    KC_5,    KC_6,    KC_PPLS,            XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT,       KC_RCTL, KC_RGUI,
-       XXXXXXX, KC_DOT,  KC_1,    KC_2,    KC_3,    KC_0,               XXXXXXX, A(KC_V), A(KC_D), A(KC_S),       A(KC_A), XXXXXXX,
+       XXXXXXX, XXXXXXX, XXXXXXX, KC_LGUI, XXXXXXX, QK_BOOT,            QK_BOOT,       S_D_MOD, DPI_MOD, SNIPING, XXXXXXX, XXXXXXX,
+       XXXXXXX, KC_PAST, KC_7,    KC_8,    KC_9,    KC_MINS,            XXXXXXX,       XXXXXXX, KC_UP,   XXXXXXX, XXXXXXX, XXXXXXX,
+       XXXXXXX, KC_PSLS, KC_4,    KC_5,    KC_6,    KC_PPLS,            XXXXXXX,       KC_LEFT, KC_DOWN, KC_RGHT, KC_RCTL, KC_RGUI,
+       XXXXXXX, KC_DOT,  KC_1,    KC_2,    KC_3,    KC_0,               OSM(MOD_RALT), A(KC_V), A(KC_D), A(KC_S), A(KC_A), XXXXXXX,
 
                                   KC_BSPC, KC_SPC,  KC_BTN3,            KC_BTN3, KC_BTN1,
                                            XXXXXXX, KC_BTN2,            KC_BTN2
