@@ -115,7 +115,7 @@ static uint16_t auto_pointer_layer_timer = 0;
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_BASE] = LAYOUT(
 
-        KC_MS_BTN1, KC_MS_BTN2, KC_F2, KC_ENT, KC_LPRN,      KC_RPRN,               RGB_TOG,       KC_7,          KC_ENT,     CW_TOGG, XXXXXXX,       TG(1),
+        KC_MS_BTN1, KC_MS_BTN2, KC_F2, KC_ENT, KC_LPRN,      KC_RPRN,               RGB_TOG,       KC_7,          KC_ENT,     XXXXXXX, CW_TOGG,       TG(1),
         CW_TOGG,    KC_U,       KC_W,  KC_E,   KC_R,         KC_T,                  KC_Y,          KC_U,          KC_I,       KC_O,    KC_TAB,        KC_BSLS,
         KC_Q,       LT(3,KC_A), KC_S,  KC_D,   LSFT_T(KC_F), KC_G,                  KC_H,          RSFT_T(KC_J),  LT(3,KC_K), KC_L,    LT(1,KC_SCLN), RALT_T(KC_P),
         DRGSCRL,    KC_Z,       KC_X,  KC_C,   KC_V,         KC_B,                  RALT_T(KC_N),  KC_M,          KC_COMM,    KC_DOT,  LT(3,KC_SLSH), KC_ENT,
@@ -151,8 +151,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   
        KC_BTN1,                     KC_BTN2,                     XXXXXXX, XXXXXXX, S(C(G(KC_B))), G(S(KC_RGHT)),          QK_BOOT, XXXXXXX,    KC_TRNS,       XXXXXXX, _______, _______,
        POINTER_DEFAULT_DPI_REVERSE, POINTER_DEFAULT_DPI_FORWARD, KC_WBAK, MS_UP,   KC_WFWD,       C(A(KC_DEL)),           XXXXXXX, C(KC_T),    XXXXXXX,       C(KC_W), KC_BTN3, KC_RGUI,
-       XXXXXXX,                     XXXXXXX,                     MS_LEFT, MS_DOWN, MS_RGHT,       MS_WHLU,                KC_F5,   KC_BTN1,    OSM(MOD_RSFT), KC_BTN2, KC_RCTL, OSM(MOD_RSFT),
-       DRGSCRL,                     XXXXXXX,                     DRGSCRL, SNIPING, XXXXXXX,       MS_WHLD,                KC_ESC,  KC_WFWD,    XXXXXXX,       KC_WBAK, KC_RGUI, DRGSCRL,
+       XXXXXXX,                     XXXXXXX,                     MS_LEFT, MS_DOWN, MS_RGHT,       MS_WHLU,                XXXXXXX, KC_BTN1,    OSM(MOD_RSFT), KC_BTN2, KC_RCTL, OSM(MOD_RSFT),
+       DRGSCRL,                     XXXXXXX,                     DRGSCRL, SNIPING, XXXXXXX,       MS_WHLD,                KC_F5,   KC_WFWD,    XXXXXXX,       KC_WBAK, KC_RGUI, DRGSCRL,
   
                                                                                  KC_BTN2, KC_BTN1, KC_BTN3,               C(KC_PGUP), C(KC_PGDN),
                                                                                     C(KC_PGUP), C(KC_PGDN),               KC_HOME
