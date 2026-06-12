@@ -46,6 +46,7 @@ const uint16_t PROGMEM rpgdn[] = {KC_COMM, KC_DOT, COMBO_END};
 const uint16_t PROGMEM Ralt[] = {KC_I, KC_O, COMBO_END};
 const uint16_t PROGMEM f5[] = {KC_BTN1, KC_BTN2, COMBO_END};
 const uint16_t PROGMEM esc[] = {KC_V, KC_B, COMBO_END};
+const uint16_t PROGMEM Resc[] = {RALT_T(KC_N), KC_M, COMBO_END};
 const uint16_t PROGMEM layer4[] = {MO(2), LT(3,KC_A), COMBO_END};
 const uint16_t PROGMEM Rlayer4[] = {LT(1,KC_SPC), LT(1,KC_SCLN), COMBO_END};
 const uint16_t PROGMEM layer5[] = {MO(2), KC_Z, COMBO_END};
@@ -70,6 +71,7 @@ combo_t key_combos[] = {
     COMBO(Ralt, OSM(MOD_RALT)),
     COMBO(f5, KC_F5),
     COMBO(esc, KC_ESC),
+    COMBO(Resc, KC_ESC),
     COMBO(layer4, OSL(4)),
     COMBO(Rlayer4, OSL(4)),
     COMBO(layer5, OSL(5)),
@@ -118,7 +120,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_Q,       LT(3,KC_A), KC_S,  KC_D,   LSFT_T(KC_F), KC_G,                  KC_H,          RSFT_T(KC_J),  LT(3,KC_K), KC_L,    LT(1,KC_SCLN), RALT_T(KC_P),
         DRGSCRL,    KC_Z,       KC_X,  KC_C,   KC_V,         KC_B,                  RALT_T(KC_N),  KC_M,          KC_COMM,    KC_DOT,  LT(3,KC_SLSH), KC_ENT,
   
-                             LT(1,KC_TAB), LCTL_T(KC_BSPC), MO(2),                 KC_TAB, LT(1,KC_SPC),
+                             LT(1,KC_TAB), LCTL_T(KC_BSPC), MO(2),                 RSFT_T(KC_TAB), LT(1,KC_SPC),
                                                 KC_BTN1, KC_BTN2,                  A(KC_LSFT)
   ),
 
