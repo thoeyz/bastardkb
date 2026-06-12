@@ -161,7 +161,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
  [LAYER_ONEHANDED] = LAYOUT(
 
-       XXXXXXX, XXXXXXX, XXXXXXX, KC_LGUI, XXXXXXX,       QK_BOOT,            QK_BOOT, XXXXXXX,      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+       XXXXXXX, XXXXXXX, XXXXXXX, KC_LGUI, XXXXXXX,       QK_BOOT,            QK_BOOT, XXXXXXX,      XXXXXXX, XXXXXXX, KC_MPRV, KC_MNXT,
        XXXXXXX, KC_P,    KC_O,    KC_I,    KC_U,          KC_Y,               KC_T,    KC_R,         KC_E,    KC_W,    KC_T,    XXXXXXX,
        XXXXXXX, XXXXXXX, KC_L,    KC_K,    LSFT_T(KC_J),  KC_H,               KC_G,    RSFT_T(KC_F), KC_D,    KC_S,    KC_A,    KC_Q,
        XXXXXXX, XXXXXXX, XXXXXXX, KC_P,    KC_M,          KC_N,               KC_B,    KC_V,         KC_C,    KC_X,    KC_Z,    KC_F5,
