@@ -149,10 +149,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [LAYER_POINTER] = LAYOUT(
   
-       KC_BTN1,                     KC_BTN2,                     XXXXXXX, XXXXXXX, S(C(G(KC_B))), G(S(KC_RGHT)),          QK_BOOT, XXXXXXX,    KC_TRNS,  XXXXXXX, _______, _______,
-       POINTER_DEFAULT_DPI_REVERSE, POINTER_DEFAULT_DPI_FORWARD, KC_WBAK, MS_UP,   KC_WFWD,       C(A(KC_DEL)),           XXXXXXX, C(KC_T),    XXXXXXX,  C(KC_W), KC_BTN3, KC_RGUI,
-       XXXXXXX,                     XXXXXXX,                     MS_LEFT, MS_DOWN, MS_RGHT,       MS_WHLU,                XXXXXXX, KC_BTN1,    KC_HOME,  KC_BTN2, KC_RCTL, OSM(MOD_RSFT),
-       DRGSCRL,                     XXXXXXX,                     DRGSCRL, SNIPING, XXXXXXX,       MS_WHLD,                KC_F5,   KC_WFWD,    KC_END,   KC_WBAK, KC_RGUI, DRGSCRL,
+       KC_BTN1,                     KC_BTN2,                     XXXXXXX, XXXXXXX, S(C(G(KC_B))), G(S(KC_RGHT)),          QK_BOOT, XXXXXXX,    KC_TRNS,  XXXXXXX,         _______, _______,
+       POINTER_DEFAULT_DPI_REVERSE, POINTER_DEFAULT_DPI_FORWARD, KC_WBAK, MS_UP,   KC_WFWD,       C(A(KC_DEL)),           XXXXXXX, C(KC_T),    XXXXXXX,  C(KC_W),         KC_BTN3, KC_RGUI,
+       XXXXXXX,                     XXXXXXX,                     MS_LEFT, MS_DOWN, MS_RGHT,       MS_WHLU,                XXXXXXX, KC_BTN1,    KC_HOME,  RSFT_T(KC_BTN2), KC_RCTL, OSM(MOD_RSFT),
+       DRGSCRL,                     XXXXXXX,                     DRGSCRL, SNIPING, XXXXXXX,       MS_WHLD,                KC_F5,   KC_WFWD,    KC_END,   KC_WBAK,         KC_RGUI, DRGSCRL,
   
                                                                                  KC_BTN2, KC_BTN1, KC_BTN3,               C(KC_PGUP), C(KC_PGDN),
                                                                                     C(KC_PGUP), C(KC_PGDN),               KC_HOME
