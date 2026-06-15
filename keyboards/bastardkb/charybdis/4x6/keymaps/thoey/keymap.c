@@ -154,8 +154,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        XXXXXXX,                     XXXXXXX,                     MS_LEFT, MS_DOWN, MS_RGHT,       MS_WHLU,                C(KC_F), KC_BTN1,    KC_HOME,  RSFT_T(KC_BTN2), OSM(MOD_RCTL), OSM(MOD_RSFT),
        DRGSCRL,                     XXXXXXX,                     DRGSCRL, SNIPING, XXXXXXX,       MS_WHLD,                KC_F5,   KC_WFWD,    KC_END,   KC_WBAK,         KC_RSFT,       XXXXXXX,
   
-                                                                                 KC_BTN2, KC_BTN1, KC_BTN3,               C(KC_PGUP), C(KC_PGDN),
-                                                                                    C(KC_PGUP), C(KC_PGDN),               KC_HOME
+                                                                                 KC_BTN2, KC_BTN1, KC_BTN3,               KC_HOME, C(KC_PGDN),
+                                                                                    C(KC_PGUP), C(KC_PGDN),               C(KC_PGUP)
      
   ),
 
