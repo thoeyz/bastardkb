@@ -126,8 +126,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_Q,       LT(3,KC_A), KC_S,  KC_D,   LSFT_T(KC_F), KC_G,                  KC_H,          RSFT_T(KC_J),  LT(3,KC_K), KC_L,    LT(1,KC_SCLN), RALT_T(KC_P),
         DRGSCRL,    KC_Z,       KC_X,  KC_C,   KC_V,         KC_B,                  RALT_T(KC_N),  KC_M,          KC_COMM,    KC_DOT,  LT(3,KC_SLSH), KC_ENT,
   
-                             LT(1,KC_TAB), LCTL_T(KC_BSPC), MO(2),                 A(KC_LSFT), LT(1,KC_SPC),
-                                                KC_BTN1, KC_BTN2,                  RCTL_T(KC_TAB)
+                             LT(1,KC_TAB), LCTL_T(KC_BSPC), MO(2),                 RCTL_T(KC_TAB), LT(1,KC_SPC),
+                                                KC_BTN1, KC_BTN2,                  A(KC_LSFT)
   ),
 
   [LAYER_LOWER] = LAYOUT(
@@ -160,8 +160,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        XXXXXXX,                     XXXXXXX,                     MS_LEFT, MS_DOWN, MS_RGHT,       MS_WHLU,                C(KC_F), KC_BTN1,    KC_HOME,  RSFT_T(KC_BTN2), OSM(MOD_RCTL), OSM(MOD_RSFT),
        DRGSCRL,                     XXXXXXX,                     DRGSCRL, SNIPING, XXXXXXX,       MS_WHLD,                KC_F5,   KC_WFWD,    KC_END,   KC_WBAK,         KC_RSFT,       XXXXXXX,
   
-                                                                                 KC_BTN2, KC_BTN1, KC_BTN3,               KC_HOME, C(KC_PGDN),
-                                                                                    C(KC_PGUP), C(KC_PGDN),               C(KC_PGUP)
+                                                                                 KC_BTN2, KC_BTN1, KC_BTN3,               C(KC_PGUP), C(KC_PGDN),
+                                                                                    C(KC_PGUP), C(KC_PGDN),               KC_HOME
      
   ),
 
