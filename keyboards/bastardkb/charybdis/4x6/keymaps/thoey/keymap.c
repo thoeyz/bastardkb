@@ -180,11 +180,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
        XXXXXXX, XXXXXXX, XXXXXXX, KC_LGUI, XXXXXXX, QK_BOOT,            QK_BOOT, S_D_MOD, DPI_MOD, SNIPING, KC_MPRV, KC_MNXT,
        XXXXXXX, KC_PAST, KC_7,    KC_8,    KC_9,    KC_MINS,            XXXXXXX, XXXXXXX, KC_UP,   XXXXXXX, XXXXXXX, XXXXXXX,
-       XXXXXXX, KC_PSLS, KC_4,    KC_5,    KC_6,    KC_PPLS,            KC_VOLU, KC_LEFT, KC_DOWN, KC_RGHT, KC_RCTL, KC_RGUI,
-       XXXXXXX, KC_DOT,  KC_1,    KC_2,    KC_3,    KC_0,               KC_VOLD, A(KC_V), A(KC_D), A(KC_S), A(KC_A), KC_MUTE,
+       XXXXXXX, KC_PSLS, KC_4,    KC_5,    KC_6,    KC_PPLS,            KC_MNXT, KC_BTN1, KC_DOWN, KC_RGHT, KC_RCTL, KC_RGUI,
+       XXXXXXX, KC_DOT,  KC_1,    KC_2,    KC_3,    KC_0,               KC_MPRV, A(KC_V), A(KC_D), A(KC_S), A(KC_A), KC_MUTE,
 
-                                  KC_BSPC, KC_SPC,  KC_BTN3,            KC_BTN3, KC_BTN1,
-                                           XXXXXXX, KC_BTN2,            KC_BTN2
+                                  KC_BSPC, KC_SPC,  KC_BTN3,            KC_VOLU, KC_MUTE,
+                                           XXXXXXX, KC_BTN2,            KC_VOLD
   ),
 
 };
