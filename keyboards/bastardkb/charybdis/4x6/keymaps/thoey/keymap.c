@@ -116,11 +116,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_BASE] = LAYOUT(
 
         MS_BTN1,   MS_BTN2,     KC_F2,    KC_ENT,  KC_LPRN,        KC_RPRN,           UG_TOGG,        KC_7,            KC_ENT,        KC_9,    PVOLUME,       TG(1),
-        CW_TOGG,   KC_Q,        KC_W,     KC_E,    KC_R,           KC_T,              KC_Y,           KC_U,            KC_I,          KC_O,    CURSOR,        PTABS,
-        KC_Q,      LT(3,KC_A),  KC_S,     KC_D,    LSFT_T(KC_F),   KC_G,              KC_H,           RSFT_T(KC_J),    LT(3,KC_K),    KC_L,    LT(1,KC_SCLN), KC_P,
+        CW_TOGG,   KC_Q,        KC_W,     KC_E,    KC_R,           KC_T,              KC_Y,           KC_U,            KC_I,          KC_O,    KC_P,          CURSOR,
+        KC_Q,      LT(3,KC_A),  KC_S,     KC_D,    LSFT_T(KC_F),   KC_G,              KC_H,           RSFT_T(KC_J),    LT(3,KC_K),    KC_L,    LT(1,KC_SCLN), KC_M,
         KC_LGUI,   KC_Z,        KC_X,     KC_C,    KC_V,           KC_B,              RALT_T(KC_N),   KC_M,            KC_COMM,       KC_DOT,  LT(3,KC_SLSH), DRGSCRL,
 
-                                    LT(1,KC_TAB), LCTL_T(KC_BSPC), MO(2),             RCTL_T(KC_TAB), LT(1,KC_SPC),
+                                    LT(1,KC_TAB), LCTL_T(KC_BSPC), MO(2),             RCTL_T(KC_P), LT(1,KC_SPC),
                                                         MS_BTN1, MS_BTN2,             A(KC_LSFT)
 
   ),
