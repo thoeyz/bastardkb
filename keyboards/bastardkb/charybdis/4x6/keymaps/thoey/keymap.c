@@ -27,6 +27,62 @@ enum charybdis_keymap_layers {
     LAYER_POINTER,
 };
 
+//combos
+const uint16_t PROGMEM u[] = {RSFT_T(KC_J), LT(3,KC_K), COMBO_END};
+const uint16_t PROGMEM y[] = {RALT_T(KC_N), RSFT_T(KC_J), COMBO_END};
+const uint16_t PROGMEM y2[] = {LT(1,KC_SPC), RSFT_T(KC_J), COMBO_END};
+const uint16_t PROGMEM Rt[] = {RSFT_T(KC_F), KC_B, COMBO_END};
+const uint16_t PROGMEM Rr[] = {RSFT_T(KC_F), KC_D, COMBO_END};
+const uint16_t PROGMEM pageup[] = {KC_W, KC_E, COMBO_END};
+const uint16_t PROGMEM pagedn[] = {KC_X, KC_C, COMBO_END};
+const uint16_t PROGMEM alt[] = {KC_Z,KC_X, KC_C, COMBO_END};
+const uint16_t PROGMEM ctrl[] = {KC_D, LSFT_T(KC_F), COMBO_END};
+const uint16_t PROGMEM ltabcycfwd[] = {KC_V, KC_C, COMBO_END};
+const uint16_t PROGMEM ltabcycbk[] = {KC_Z, KC_X, COMBO_END};
+const uint16_t PROGMEM f2[] = {KC_R, KC_E, COMBO_END};
+const uint16_t PROGMEM rpgup[] = {KC_L, LT(3,KC_K), COMBO_END};
+const uint16_t PROGMEM rpgdn[] = {KC_COMM, KC_DOT, COMBO_END};
+const uint16_t PROGMEM Ralt[] = {KC_I, KC_O, COMBO_END};
+const uint16_t PROGMEM f5[] = {KC_BTN1, KC_BTN2, COMBO_END};
+const uint16_t PROGMEM esc[] = {KC_V, KC_B, COMBO_END};
+const uint16_t PROGMEM Resc[] = {RALT_T(KC_N), KC_M, COMBO_END};
+const uint16_t PROGMEM layer4[] = {MO(2), LT(3,KC_A), COMBO_END};
+const uint16_t PROGMEM Rlayer4[] = {LT(1,KC_SPC), LT(1,KC_SCLN), COMBO_END};
+const uint16_t PROGMEM layer5[] = {MO(2), KC_Z, COMBO_END};
+const uint16_t PROGMEM Rlayer5[] = {LT(1,KC_SPC), LT(3,KC_SLSH), COMBO_END};
+const uint16_t PROGMEM Rlclick[] = {KC_M, KC_COMM, COMBO_END};
+const uint16_t PROGMEM Rrclick[] = {KC_DOT, LT(3,KC_SLSH), COMBO_END};
+
+
+
+combo_t key_combos[] = {
+    COMBO(u, KC_U),
+    COMBO(y, KC_Y),
+    COMBO(y2, KC_Y),
+    COMBO(Rt, KC_T),
+    COMBO(Rr, KC_R),
+    COMBO(pageup, KC_PGUP),
+    COMBO(pagedn, KC_PGDN), 
+    COMBO(alt, OSM(MOD_LALT)),
+    COMBO(ctrl, OSM(MOD_LCTL)),
+    COMBO(ltabcycfwd, C(KC_PGDN)),
+    COMBO(ltabcycbk, C(KC_PGUP)),
+    COMBO(f2, KC_F2),
+    COMBO(rpgup, KC_PGUP),
+    COMBO(rpgdn, KC_PGDN),
+    COMBO(Ralt, OSM(MOD_RALT)),
+    COMBO(f5, KC_F5),
+    COMBO(esc, KC_ESC),
+    COMBO(Resc, KC_ESC),
+    COMBO(layer4, OSL(4)),
+    COMBO(Rlayer4, OSL(4)),
+    COMBO(layer5, OSL(5)),
+    COMBO(Rlayer5, OSL(5)),
+    COMBO(Rlclick, KC_BTN1),
+    COMBO(Rrclick, KC_BTN2),
+
+};
+
 /** \brief Automatically enable sniping-mode on the pointer layer. */
 #define CHARYBDIS_AUTO_SNIPING_ON_LAYER LAYER_POINTER
 
