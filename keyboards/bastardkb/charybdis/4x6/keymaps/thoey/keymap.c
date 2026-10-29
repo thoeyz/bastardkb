@@ -130,24 +130,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LSFT,   KC_E,        KC_A,     KC_S,    KC_D,           KC_G,              KC_PPLS,        KC_4,            KC_5,          KC_6,    KC_PAST,       KC_BSPC,
         KC_LCTL,   KC_X,        KC_3,     KC_LSFT, KC_F,           KC_5,              KC_0,           KC_1,            KC_2,          KC_3,    KC_PSLS,       KC_DOT,
 
-                                                  KC_Z, KC_SPC, KC_LALT,              KC_BSPC, KC_BSPC),
+                                                  KC_Z, KC_SPC, KC_LALT,              KC_BSPC, KC_BSPC,
                                                         MS_BTN1, MS_BTN2,             KC_0
 
   ),
 
   [LAYER_RAISE] = LAYOUT(
-  // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
-        KC_F12,   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,      KC_F6,   KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,
-  // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       KC_MNXT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_VOLU,
-  // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       KC_MPLY, KC_LEFT,   KC_UP, KC_DOWN, KC_RGHT, XXXXXXX,    XXXXXXX, KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI, KC_MUTE,
-  // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       KC_MPRV, KC_HOME, KC_PGUP, KC_PGDN,  KC_END, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_VOLD,
-  // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
-                                  _______, _______, XXXXXXX,    _______, XXXXXXX,
-                                           _______, _______,    XXXXXXX
-  //                            ╰───────────────────────────╯ ╰──────────────────╯
+
+        KC_TAB,    KC_O,        KC_F2,    KC_I,    KC_LEFT,        KC_RGHT,           XXXXXXX,        XXXXXXX,         KC_ENT,        XXXXXXX, XXXXXXX,       KC_TRANS,
+        KC_ENT,    KC_ESC,      KC_LSFT,  KC_W,    KC_C,           KC_R,              KC_MINS,        KC_7,            KC_8,          KC_9,    KC_RBRC,       KC_TAB,
+        KC_LSFT,   KC_E,        KC_A,     KC_S,    KC_D,           KC_G,              KC_PPLS,        KC_4,            KC_5,          KC_6,    KC_PAST,       KC_BSPC,
+        KC_LCTL,   KC_X,        KC_3,     KC_LSFT, KC_F,           KC_5,              KC_0,           KC_1,            KC_2,          KC_3,    KC_PSLS,       KC_DOT,
+
+                                                  KC_Z, KC_SPC, KC_LALT,              KC_BSPC, KC_BSPC,
+                                                        MS_BTN1, MS_BTN2,             KC_0
+
   ),
 
   [LAYER_POINTER] = LAYOUT(
