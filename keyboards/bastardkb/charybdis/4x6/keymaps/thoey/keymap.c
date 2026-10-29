@@ -25,6 +25,8 @@ enum charybdis_keymap_layers {
     LAYER_LOWER,
     LAYER_RAISE,
     LAYER_POINTER,
+    LAYER_ONEHANDED,
+    LAYER_RNUM,
 };
 
 //combos
@@ -149,14 +151,39 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [LAYER_POINTER] = LAYOUT(
 
-        KC_TAB,    KC_O,        KC_F2,        KC_I,    KC_LEFT,        KC_RGHT,               QK_BOOT,        XXXXXXX,         KC_ENT,        XXXXXXX,        KC_MPRV,       KC_MNXT,
-        KC_ENT,    KC_ESC,      KC_LSFT,      KC_4,    KC_5,           KC_6,                  C(A(KC_DEL)),   C(KC_T),         XXXXXXX,       C(KC_W),        MS_BTN3,       KC_RGUI,
-        KC_LSFT,   KC_RBRC,     KC_LEFT,      KC_UP,   KC_RGHT,        MS_WHLU,               C(KC_F),        MS_BTN1,         KC_HOME,       RSFT(MS_BTN2),  OSM(MOD_RCTL), OSM(MOD_RSFT),
-        KC_LCTL,   KC_LCTL,     A(KC_LEFT),   KC_DOWN, A(KC_RGHT),     MS_WHLD,                KC_F5,          KC_WFWD,         KC_END,        KC_WBAK,        KC_RSFT,       G(KC_D),
+        KC_TAB,                       KC_O,                        KC_F2,        KC_I,     KC_LEFT,        KC_RGHT,               QK_BOOT,        XXXXXXX,         KC_ENT,        XXXXXXX,        KC_MPRV,       KC_MNXT,
+        POINTER_DEFAULT_DPI_REVERSE,  POINTER_DEFAULT_DPI_FORWARD, KC_WBAK,      MS_UP,    KC_WFWD,        KC_6,                  C(A(KC_DEL)),   C(KC_T),         XXXXXXX,       C(KC_W),        MS_BTN3,       KC_RGUI,
+        KC_LSFT,                      KC_RBRC,                     MS_LEFT,      MS_DOWN,  MS_RGHT,        MS_WHLU,               C(KC_F),        MS_BTN1,         KC_HOME,       RSFT(MS_BTN2),  OSM(MOD_RCTL), OSM(MOD_RSFT),
+        KC_LCTL,                      KC_LCTL,                     DRGSCRL,      SNIPING,  XXXXXXX,        MS_WHLD,               KC_F5,          KC_WFWD,         KC_END,        KC_WBAK,        KC_RSFT,       G(KC_D),
 
-                                                    XXXXXXX, XXXXXXX, XXXXXXX,                C(KC_PGUP), C(KC_PGDN),
-                                                             MS_BTN1, MS_BTN2,                KC_HOME
+                                                                                         MS_BTN2, MS_BTN1, MS_BTN3,                C(KC_PGUP), C(KC_PGDN),
+                                                                                            C(KC_PGUP), C(KC_PGDN),                KC_HOME
 
   ),
+
+ [LAYER_ONEHANDED] = LAYOUT(
+
+        KC_TAB,                       KC_O,                        KC_F2,        KC_I,     KC_LEFT,        KC_RGHT,               QK_BOOT,        XXXXXXX,         KC_ENT,        XXXXXXX,        KC_MPRV,       KC_MNXT,
+        POINTER_DEFAULT_DPI_REVERSE,  POINTER_DEFAULT_DPI_FORWARD, KC_WBAK,      MS_UP,    KC_WFWD,        KC_6,                  C(A(KC_DEL)),   C(KC_T),         XXXXXXX,       C(KC_W),        MS_BTN3,       KC_RGUI,
+        KC_LSFT,                      KC_RBRC,                     MS_LEFT,      MS_DOWN,  MS_RGHT,        MS_WHLU,               C(KC_F),        MS_BTN1,         KC_HOME,       RSFT(MS_BTN2),  OSM(MOD_RCTL), OSM(MOD_RSFT),
+        KC_LCTL,                      KC_LCTL,                     DRGSCRL,      SNIPING,  XXXXXXX,        MS_WHLD,               KC_F5,          KC_WFWD,         KC_END,        KC_WBAK,        KC_RSFT,       G(KC_D),
+
+                                                                                         MS_BTN2, MS_BTN1, MS_BTN3,                C(KC_PGUP), C(KC_PGDN),
+                                                                                            C(KC_PGUP), C(KC_PGDN),                KC_HOME
+
+  ),
+
+ [LAYER_RNUM] = LAYOUT(
+
+        KC_TAB,                       KC_O,                        KC_F2,        KC_I,     KC_LEFT,        KC_RGHT,               QK_BOOT,        XXXXXXX,         KC_ENT,        XXXXXXX,        KC_MPRV,       KC_MNXT,
+        POINTER_DEFAULT_DPI_REVERSE,  POINTER_DEFAULT_DPI_FORWARD, KC_WBAK,      MS_UP,    KC_WFWD,        KC_6,                  C(A(KC_DEL)),   C(KC_T),         XXXXXXX,       C(KC_W),        MS_BTN3,       KC_RGUI,
+        KC_LSFT,                      KC_RBRC,                     MS_LEFT,      MS_DOWN,  MS_RGHT,        MS_WHLU,               C(KC_F),        MS_BTN1,         KC_HOME,       RSFT(MS_BTN2),  OSM(MOD_RCTL), OSM(MOD_RSFT),
+        KC_LCTL,                      KC_LCTL,                     DRGSCRL,      SNIPING,  XXXXXXX,        MS_WHLD,               KC_F5,          KC_WFWD,         KC_END,        KC_WBAK,        KC_RSFT,       G(KC_D),
+
+                                                                                         MS_BTN2, MS_BTN1, MS_BTN3,                C(KC_PGUP), C(KC_PGDN),
+                                                                                            C(KC_PGUP), C(KC_PGDN),                KC_HOME
+
+  ),
+
 };
 // clang-format on
