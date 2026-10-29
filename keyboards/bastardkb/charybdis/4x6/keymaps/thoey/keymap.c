@@ -142,24 +142,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LSFT,   KC_RBRC,     KC_LEFT,      KC_UP,   KC_RGHT,        KC_HOME,               KC_PPLS,        KC_4,            KC_5,          KC_6,    KC_QUOT,       KC_BSPC,
         KC_LCTL,   KC_LCTL,     A(KC_LEFT),   KC_DOWN, A(KC_RGHT),     KC_END,                KC_0,           KC_1,            KC_2,          KC_3,    KC_PSLS,       KC_DOT,
 
-                                                    XXXXXXX, XXXXXXX, XXXXXXX,                KC_EQUL, KC_LBRC,
+                                                    XXXXXXX, XXXXXXX, XXXXXXX,                KC_EQL, KC_LBRC,
                                                              MS_BTN1, MS_BTN2,                XXXXXXX
 
   ),
 
   [LAYER_POINTER] = LAYOUT(
-  // ╭──────────────────────────────────────────────────────╮ ╭──────────────────────────────────────────────────────╮
-       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-  // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX, PZOOM,   PVOLUME, PTABS,   DPI_MOD, S_D_MOD,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-  // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, PHIST,      XXXXXXX, KC_RSFT, KC_RCTL, KC_RALT, KC_RGUI, XXXXXXX,
-  // ├──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────┤
-       XXXXXXX, _______, DRGSCRL, SNIPING, CURSOR,  PBRIGHT,    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______, XXXXXXX,
-  // ╰──────────────────────────────────────────────────────┤ ├──────────────────────────────────────────────────────╯
-                                  MS_BTN2, MS_BTN1, MS_BTN3,    XXXXXXX, XXXXXXX,
-                                           XXXXXXX, MS_BTN2,    XXXXXXX
-  //                            ╰───────────────────────────╯ ╰──────────────────╯
+
+        KC_TAB,    KC_O,        KC_F2,        KC_I,    KC_LEFT,        KC_RGHT,               QK_BOOT,        XXXXXXX,         KC_ENT,        XXXXXXX,        KC_MPRV,       KC_MNXT,
+        KC_ENT,    KC_ESC,      KC_LSFT,      KC_4,    KC_5,           KC_6,                  C(A(KC_DEL)),   C(KC_T),         XXXXXXX,       C(KC_W),        MS_BTN3,       KC_RGUI,
+        KC_LSFT,   KC_RBRC,     KC_LEFT,      KC_UP,   KC_RGHT,        MS_WHLU,               C(KC_F),        MS_BTN1,         KC_HOME,       RSFT(MS_BTN2),  OSM(MOD_RCTL), OSM(MOD_RSFT),
+        KC_LCTL,   KC_LCTL,     A(KC_LEFT),   KC_DOWN, A(KC_RGHT),     MS_WHLD,                KC_F5,          KC_WFWD,         KC_END,        KC_WBAK,        KC_RSFT,       G(KC_D),
+
+                                                    XXXXXXX, XXXXXXX, XXXXXXX,                C(KC_PGUP), C(KC_PGDN),
+                                                             MS_BTN1, MS_BTN2,                KC_HOME
+
   ),
 };
 // clang-format on
