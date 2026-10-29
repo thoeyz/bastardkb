@@ -43,7 +43,7 @@ const uint16_t PROGMEM f2[] = {KC_R, KC_E, COMBO_END};
 const uint16_t PROGMEM rpgup[] = {KC_L, LT(3,KC_K), COMBO_END};
 const uint16_t PROGMEM rpgdn[] = {KC_COMM, KC_DOT, COMBO_END};
 const uint16_t PROGMEM Ralt[] = {KC_I, KC_O, COMBO_END};
-const uint16_t PROGMEM f5[] = {KC_BTN1, KC_BTN2, COMBO_END};
+const uint16_t PROGMEM f5[] = {MS_BTN1, MS_BTN2, COMBO_END};
 const uint16_t PROGMEM esc[] = {KC_V, KC_B, COMBO_END};
 const uint16_t PROGMEM Resc[] = {RALT_T(KC_N), KC_M, COMBO_END};
 const uint16_t PROGMEM layer4[] = {MO(2), LT(3,KC_A), COMBO_END};
@@ -78,8 +78,8 @@ combo_t key_combos[] = {
     COMBO(Rlayer4, OSL(4)),
     COMBO(layer5, OSL(5)),
     COMBO(Rlayer5, OSL(5)),
-    COMBO(Rlclick, KC_BTN1),
-    COMBO(Rrclick, KC_BTN2),
+    COMBO(Rlclick, MS_BTN1),
+    COMBO(Rrclick, MS_BTN2),
 
 };
 
