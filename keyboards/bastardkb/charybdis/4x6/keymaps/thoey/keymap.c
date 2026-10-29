@@ -192,19 +192,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 layer_state_t layer_state_set_user(layer_state_t state) {
     switch (get_highest_layer(state)) {
     case LAYER_LOWER:
-        DRAGSCROLL_MODE(false);
+        dragscroll_mode(false);
         break;
     case LAYER_RAISE:
-        DRAGSCROLL_MODE(false);
+        dragscroll_mode(false);
         break;
     case LAYER_POINTER:
-        DRAGSCROLL_MODE(true);
+        dragscroll_mode(true);
         break;
     case LAYER_ONEHANDED:
-        DRAGSCROLL_MODE(false);
+        dragscroll_mode(false);
         break;
     default:
-        DRAGSCROLL_MODE(false);
+        dragscroll_mode(false);
         break;
     }
     return state;    
