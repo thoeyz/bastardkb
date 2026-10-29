@@ -125,7 +125,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [LAYER_LOWER] = LAYOUT(
 
-        KC_TAB,    KC_O,        KC_F2,    KC_I,    KC_LEFT,        KC_RGHT,           XXXXXXX,        XXXXXXX,         KC_ENT,        XXXXXXX, XXXXXXX,       KC_TRANS,
+        KC_TAB,    KC_O,        KC_F2,    KC_I,    KC_LEFT,        KC_RGHT,           XXXXXXX,        XXXXXXX,         KC_ENT,        XXXXXXX, XXXXXXX,       KC_TRNS,
         KC_ENT,    KC_ESC,      KC_LSFT,  KC_W,    KC_C,           KC_R,              KC_MINS,        KC_7,            KC_8,          KC_9,    KC_RBRC,       KC_TAB,
         KC_LSFT,   KC_E,        KC_A,     KC_S,    KC_D,           KC_G,              KC_PPLS,        KC_4,            KC_5,          KC_6,    KC_PAST,       KC_BSPC,
         KC_LCTL,   KC_X,        KC_3,     KC_LSFT, KC_F,           KC_5,              KC_0,           KC_1,            KC_2,          KC_3,    KC_PSLS,       KC_DOT,
@@ -137,13 +137,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [LAYER_RAISE] = LAYOUT(
 
-        KC_TAB,    KC_O,        KC_F2,    KC_I,    KC_LEFT,        KC_RGHT,           XXXXXXX,        XXXXXXX,         KC_ENT,        XXXXXXX, XXXXXXX,       KC_TRANS,
-        KC_ENT,    KC_ESC,      KC_LSFT,  KC_W,    KC_C,           KC_R,              KC_MINS,        KC_7,            KC_8,          KC_9,    KC_RBRC,       KC_TAB,
-        KC_LSFT,   KC_E,        KC_A,     KC_S,    KC_D,           KC_G,              KC_PPLS,        KC_4,            KC_5,          KC_6,    KC_PAST,       KC_BSPC,
-        KC_LCTL,   KC_X,        KC_3,     KC_LSFT, KC_F,           KC_5,              KC_0,           KC_1,            KC_2,          KC_3,    KC_PSLS,       KC_DOT,
+        KC_TAB,    KC_O,        KC_F2,        KC_I,    KC_LEFT,        KC_RGHT,               XXXXXXX,        XXXXXXX,         KC_ENT,        XXXXXXX, XXXXXXX,       KC_TRNS,
+        KC_ENT,    KC_ESC,      KC_LSFT,      KC_4,    KC_5,           KC_6,                  KC_7,           KC_8,            KC_9,          KC_0,    KC_MINS,       KC_TAB,
+        KC_LSFT,   KC_RBRC,     KC_LEFT,      KC_UP,   KC_RGHT,        KC_HOME,               KC_PPLS,        KC_4,            KC_5,          KC_6,    KC_QUOT,       KC_BSPC,
+        KC_LCTL,   KC_LCTL,     A(KC_LEFT),   KC_DOWN, A(KC_RGHT),     KC_END,                KC_0,           KC_1,            KC_2,          KC_3,    KC_PSLS,       KC_DOT,
 
-                                                  KC_Z, KC_SPC, KC_LALT,              KC_BSPC, KC_BSPC,
-                                                        MS_BTN1, MS_BTN2,             KC_0
+                                                    XXXXXXX, XXXXXXX, XXXXXXX,                KC_EQUL, KC_LBRC,
+                                                             MS_BTN1, MS_BTN2,                XXXXXXX
 
   ),
 
